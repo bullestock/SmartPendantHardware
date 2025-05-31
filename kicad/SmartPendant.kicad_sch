@@ -6176,282 +6176,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "JLC SMT copper tooling hole"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TH1"
-				(at -2.2352 3.3909 0)
-				(effects
-					(font
-						(size 1.6891 1.6891)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "JLC SMT copper tooling hole"
-				(at -0.6096 3.7211 0)
-				(effects
-					(font
-						(size 1.6891 1.6891)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supplier Part" "x"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "JLC SMT copper tooling hole_0_0"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin unspecified line
-					(at 2.54 0 180)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 0.0254 0.0254)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0.0254 0.0254)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "JLC SMT copper tooling hole_1"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TH2"
-				(at -2.2352 3.3909 0)
-				(effects
-					(font
-						(size 1.6891 1.6891)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "JLC SMT copper tooling hole"
-				(at -0.6096 3.7211 0)
-				(effects
-					(font
-						(size 1.6891 1.6891)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supplier Part" "x"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "JLC SMT copper tooling hole_1_0_0"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin unspecified line
-					(at 2.54 0 180)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 0.0254 0.0254)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0.0254 0.0254)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "JLC SMT copper tooling hole_2"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TH3"
-				(at -2.2352 3.3909 0)
-				(effects
-					(font
-						(size 1.6891 1.6891)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "JLC SMT copper tooling hole"
-				(at -0.6096 3.7211 0)
-				(effects
-					(font
-						(size 1.6891 1.6891)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Supplier Part" "x"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "JLC SMT copper tooling hole_2_0_0"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin unspecified line
-					(at 2.54 0 180)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 0.0254 0.0254)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0.0254 0.0254)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Jumper:SolderJumper_2_Bridged"
 			(pin_numbers
 				(hide yes)
@@ -8107,6 +7831,89 @@
 								(size 1.27 1.27)
 							)
 						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -10188,89 +9995,6 @@
 						(effects
 							(font
 								(size 0.0254 0.0254)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "TESTPOINT"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 2.159 3.3909 0)
-				(effects
-					(font
-						(size 1.6891 1.6891)
-					)
-					(justify right top)
-				)
-			)
-			(property "Value" "TESTPOINT"
-				(at 3.683 5.0927 0)
-				(effects
-					(font
-						(size 1.6891 1.6891)
-					)
-					(justify right top)
-					(hide yes)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TESTPOINT_0_0"
-				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -1.27)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
 							)
 						)
 					)
@@ -13596,10 +13320,6 @@
 		(uuid "2d740716-75e4-4e2a-b047-bb130a08b35e")
 	)
 	(no_connect
-		(at 72.39 27.94)
-		(uuid "32a86124-cb89-42d1-a55e-36758830c357")
-	)
-	(no_connect
 		(at 40.64 41.91)
 		(uuid "3335692e-a253-4f5d-aadb-7a27ae352f75")
 	)
@@ -13616,10 +13336,6 @@
 		(uuid "4dd6fe75-be48-4902-852d-eedbf8060a6a")
 	)
 	(no_connect
-		(at 52.07 27.94)
-		(uuid "5172d2af-1daa-4333-825c-861e5c4735ec")
-	)
-	(no_connect
 		(at 40.64 44.45)
 		(uuid "9545f56c-eba3-401a-ab2d-04f3fb69ea29")
 	)
@@ -13632,16 +13348,8 @@
 		(uuid "ab35303c-5303-44c7-9049-3ed9be8c4aa0")
 	)
 	(no_connect
-		(at 64.77 27.94)
-		(uuid "c447f91f-e9be-4c5a-8dcf-daeefef276ab")
-	)
-	(no_connect
 		(at 95.25 54.61)
 		(uuid "c9b6c16d-81f7-44ef-a03f-6fb84179aaad")
-	)
-	(no_connect
-		(at 58.42 27.94)
-		(uuid "d5c30be6-08e2-4fdc-85d3-fca4b641715c")
 	)
 	(no_connect
 		(at 287.02 139.7)
@@ -17132,82 +16840,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLC SMT copper tooling hole_1")
-		(at 55.88 27.94 0)
-		(unit 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0446408d-b290-427b-b1e9-56535b6bf4e3")
-		(property "Reference" "TH2"
-			(at 53.6448 24.5491 0)
-			(effects
-				(font
-					(size 1.6891 1.6891)
-				)
-				(justify left top)
-			)
-		)
-		(property "Value" "JLC SMT copper tooling hole"
-			(at 55.2704 24.2189 0)
-			(effects
-				(font
-					(size 1.6891 1.6891)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 55.88 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 55.88 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 55.88 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier Part" "x"
-			(at 55.88 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4fff207d-3797-4bd5-97f4-4e10bd49e81f")
-		)
-		(instances
-			(project ""
-				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
-					(reference "TH2")
-					(unit 0)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "VCC")
 		(at 130.81 39.37 0)
 		(mirror x)
@@ -17270,6 +16902,70 @@
 				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
 					(reference "#PWR0177")
 					(unit 0)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 118.11 22.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "08343303-4083-4db7-95ef-5d8e7cb3bd91")
+		(property "Reference" "H3"
+			(at 120.65 21.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 120.65 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 118.11 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 118.11 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 118.11 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
+					(reference "H3")
+					(unit 1)
 				)
 			)
 		)
@@ -17422,6 +17118,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 80.01 22.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0c766d81-8d62-4961-b632-abed66749e48")
+		(property "Reference" "H1"
+			(at 82.55 21.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 82.55 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 80.01 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 80.01 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "VCC")
 		(at 107.95 191.77 0)
 		(mirror x)
@@ -17515,7 +17275,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Diode_SMD_AKL:D_MiniMELF"
 			(at 223.52 63.5 0)
 			(effects
 				(font
@@ -17908,7 +17668,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 58.42 161.29 0)
 			(effects
 				(font
@@ -18414,7 +18174,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Diode_SMD_AKL:D_0603_1608Metric"
 			(at 149.86 116.84 0)
 			(effects
 				(font
@@ -18577,7 +18337,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 52.07 196.85 0)
 			(effects
 				(font
@@ -18749,7 +18509,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 274.32 55.88 0)
 			(effects
 				(font
@@ -19187,7 +18947,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 48.26 161.29 0)
 			(effects
 				(font
@@ -19473,7 +19233,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3704f0ea-197b-4fe3-9137-d8b856f52889")
-		(property "Reference" "USR_BTN"
+		(property "Reference" "USR_BTN1"
 			(at 214.7316 164.0459 0)
 			(effects
 				(font
@@ -19569,7 +19329,7 @@
 		(instances
 			(project ""
 				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
-					(reference "USR_BTN")
+					(reference "USR_BTN1")
 					(unit 0)
 				)
 			)
@@ -19602,7 +19362,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 278.13 49.53 0)
 			(effects
 				(font
@@ -19945,82 +19705,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLC SMT copper tooling hole_2")
-		(at 62.23 27.94 0)
-		(unit 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3ba54bd5-db4e-425b-9e09-90748adf61a9")
-		(property "Reference" "TH3"
-			(at 59.9948 24.5491 0)
-			(effects
-				(font
-					(size 1.6891 1.6891)
-				)
-				(justify left top)
-			)
-		)
-		(property "Value" "JLC SMT copper tooling hole"
-			(at 61.6204 24.2189 0)
-			(effects
-				(font
-					(size 1.6891 1.6891)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 62.23 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 62.23 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 62.23 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier Part" "x"
-			(at 62.23 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "05d8ce4f-3fec-43ff-aa7d-940adc0f77bf")
-		)
-		(instances
-			(project ""
-				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
-					(reference "TH3")
-					(unit 0)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Jumper:SolderJumper_2_Bridged")
 		(at 262.89 132.08 0)
 		(unit 1)
@@ -20048,7 +19732,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
 			(at 262.89 132.08 0)
 			(effects
 				(font
@@ -20117,7 +19801,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 284.48 99.06 0)
 			(effects
 				(font
@@ -20222,7 +19906,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 48.26 125.73 0)
 			(effects
 				(font
@@ -20516,7 +20200,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 160.02 116.84 0)
 			(effects
 				(font
@@ -20621,7 +20305,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 223.52 34.29 0)
 			(effects
 				(font
@@ -20925,7 +20609,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 195.58 34.29 0)
 			(effects
 				(font
@@ -21164,7 +20848,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 247.65 186.69 0)
 			(effects
 				(font
@@ -21336,7 +21020,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 185.42 163.83 0)
 			(effects
 				(font
@@ -21950,7 +21634,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 148.59 107.95 0)
 			(effects
 				(font
@@ -22121,7 +21805,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 241.3 161.29 0)
 			(effects
 				(font
@@ -22293,7 +21977,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Diode_SMD_AKL:D_MiniMELF"
 			(at 102.87 165.1 0)
 			(effects
 				(font
@@ -22398,7 +22082,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Diode_SMD_AKL:D_0603_1608Metric"
 			(at 168.91 142.24 0)
 			(effects
 				(font
@@ -22595,73 +22279,6 @@
 			(project ""
 				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
 					(reference "#PWR0175")
-					(unit 0)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "TESTPOINT")
-		(at 68.58 27.94 0)
-		(unit 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6d6dc190-fad1-4c54-a77e-a8ba282dd9f3")
-		(property "Reference" "TP1"
-			(at 70.739 24.5491 0)
-			(effects
-				(font
-					(size 1.6891 1.6891)
-				)
-				(justify right top)
-			)
-		)
-		(property "Value" "TESTPOINT"
-			(at 72.263 22.8473 0)
-			(effects
-				(font
-					(size 1.6891 1.6891)
-				)
-				(justify right top)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 68.58 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 68.58 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 68.58 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e5a4f5f9-3749-4c54-9187-eb537e380548")
-		)
-		(instances
-			(project ""
-				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
-					(reference "TP1")
 					(unit 0)
 				)
 			)
@@ -23066,7 +22683,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 180.34 34.29 0)
 			(effects
 				(font
@@ -23171,7 +22788,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 97.79 170.18 0)
 			(effects
 				(font
@@ -23276,7 +22893,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 292.1 161.29 0)
 			(effects
 				(font
@@ -23492,7 +23109,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 287.02 186.69 0)
 			(effects
 				(font
@@ -23768,7 +23385,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 233.68 34.29 0)
 			(effects
 				(font
@@ -23940,7 +23557,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 158.75 142.24 0)
 			(effects
 				(font
@@ -24045,7 +23662,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 187.96 34.29 0)
 			(effects
 				(font
@@ -24375,7 +23992,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 278.13 34.29 0)
 			(effects
 				(font
@@ -24480,7 +24097,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Diode_SMD_AKL:D_0603_1608Metric"
 			(at 158.75 107.95 0)
 			(effects
 				(font
@@ -24844,7 +24461,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 215.9 77.47 0)
 			(effects
 				(font
@@ -24949,7 +24566,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Diode_SMD_AKL:D_MiniMELF"
 			(at 284.48 74.93 0)
 			(effects
 				(font
@@ -25095,6 +24712,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 99.06 22.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "99161ebf-d883-40df-bf5a-7e30b9a6e2a9")
+		(property "Reference" "H2"
+			(at 101.6 21.5899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 101.6 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 99.06 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 99.06 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "0805W8F330JT5E")
 		(at 48.26 123.19 0)
 		(unit 0)
@@ -25121,7 +24802,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 48.26 123.19 0)
 			(effects
 				(font
@@ -26012,7 +25693,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Diode_SMD_AKL:D_0603_1608Metric"
 			(at 149.86 127 0)
 			(effects
 				(font
@@ -26306,7 +25987,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 160.02 127 0)
 			(effects
 				(font
@@ -26478,7 +26159,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 215.9 87.63 0)
 			(effects
 				(font
@@ -27000,82 +26681,6 @@
 		)
 	)
 	(symbol
-		(lib_id "JLC SMT copper tooling hole")
-		(at 49.53 27.94 0)
-		(unit 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "cc50f2b1-3cda-45d4-9920-705fb7ac1463")
-		(property "Reference" "TH1"
-			(at 47.2948 24.5491 0)
-			(effects
-				(font
-					(size 1.6891 1.6891)
-				)
-				(justify left top)
-			)
-		)
-		(property "Value" "JLC SMT copper tooling hole"
-			(at 48.9204 24.2189 0)
-			(effects
-				(font
-					(size 1.6891 1.6891)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 49.53 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier Part" "x"
-			(at 49.53 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4fbd5f4b-ad01-4a88-815b-4df4e2b5d26a")
-		)
-		(instances
-			(project ""
-				(path "/78cb6519-38e9-49e2-a9df-0cb5fdb5035f"
-					(reference "TH1")
-					(unit 0)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "TCC0805X7R105M500FT_6")
 		(at 172.72 34.29 0)
 		(unit 0)
@@ -27102,7 +26707,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 172.72 34.29 0)
 			(effects
 				(font
@@ -27336,7 +26941,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 214.63 34.29 0)
 			(effects
 				(font
@@ -27441,7 +27046,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 107.95 196.85 0)
 			(effects
 				(font
@@ -27613,7 +27218,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 			(at 278.13 31.75 0)
 			(effects
 				(font
@@ -28056,7 +27661,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 204.47 34.29 0)
 			(effects
 				(font
@@ -28227,7 +27832,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 165.1 34.29 0)
 			(effects
 				(font
@@ -28332,7 +27937,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 			(at 242.57 34.29 0)
 			(effects
 				(font
@@ -28612,7 +28217,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical"
 			(at 196.85 62.23 0)
 			(effects
 				(font
@@ -28934,7 +28539,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PCM_Package_TO_SOT_SMD_AKL:SOT-223"
 			(at 106.68 114.3 0)
 			(effects
 				(font
