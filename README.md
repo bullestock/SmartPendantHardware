@@ -1,6 +1,6 @@
 # Devtronic SmartPendant
 
-This project allow to control grblHAL based CNC machine withot PC. It also make work way more convinient.
+This project allows controlling a grblHAL based CNC machine without a PC. It also makes work way more convenient.
 
 **Store:** https://devtronic.square.site/
 
@@ -29,7 +29,7 @@ Files for PCB version 1.2: https://oshwlab.com/nick_shl/smart_pendant
 
 # Parts
 
-To make this project yourself, you will need this essential parts:
+To make this project yourself, you will need these essential parts:
 
 * [WeAct BlackPill F411 25M HSE:](https://s.click.aliexpress.com/e/_DC6TlGd)
 
@@ -61,5 +61,5 @@ Schematic vesion 1.1:
 
 ## Firmware
 
-Source code can be [found there](https://github.com/nickshl/SmartPendant)
+Source code can be found [here](https://github.com/nickshl/SmartPendant)
 
