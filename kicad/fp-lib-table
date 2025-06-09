@@ -7,4 +7,5 @@
   (lib (name "Connector_USB")(type "KiCad")(uri "${KIPRJMOD}/footprints/Connector_USB.pretty")(options "")(descr ""))
   (lib (name "Jumper")(type "KiCad")(uri "${KIPRJMOD}/footprints/Jumper.pretty")(options "")(descr ""))
   (lib (name "MountingHole")(type "KiCad")(uri "${KIPRJMOD}/footprints/MountingHole.pretty")(options "")(descr ""))
+  (lib (name "Custom")(type "KiCad")(uri "${KIPRJMOD}/footprints/Custom.pretty")(options "")(descr ""))
 )
