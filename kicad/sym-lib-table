@@ -5,4 +5,5 @@
   (lib (name "Jumper")(type "KiCad")(uri "${KIPRJMOD}/symbols/Jumper.kicad_sym")(options "")(descr ""))
   (lib (name "power")(type "KiCad")(uri "${KIPRJMOD}/symbols/power.kicad_sym")(options "")(descr ""))
   (lib (name "Mechanical")(type "KiCad")(uri "${KIPRJMOD}/symbols/Mechanical.kicad_sym")(options "")(descr ""))
+  (lib (name "Switch")(type "KiCad")(uri "${KIPRJMOD}/symbols/Switch.kicad_sym")(options "")(descr ""))
 )
