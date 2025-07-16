@@ -152,7 +152,7 @@ module Top()
 {
   if(FOR_PRINT)
   {
-    CaseRaft(3, LAYER_H);
+    //CaseRaft(3, LAYER_H);
     difference()
     {
       translate([0,0,0]) cylinder(d=W+ENC_T, h=BZPOS);
@@ -319,7 +319,7 @@ module Bottom()
 {
   if(FOR_PRINT)
   {
-    CaseRaft(3, LAYER_H);
+    //CaseRaft(3, LAYER_H);
   }
   difference()
   {
