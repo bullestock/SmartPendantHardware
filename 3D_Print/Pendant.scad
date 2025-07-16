@@ -11,7 +11,9 @@ T = 2.4; // Case thickness
 R = 2.6; // Case radius
 W = 60; // Width(encoder & board)
 L = 156+R*2; // Length(full length + two radiuses)
-H = 16;//-(T-1.6); //BZPOS+BT+9;
+H = 16; //-(T-1.6); //BZPOS+BT+9;
+
+LED_DIA = 1;
 
 // Encoder tolerance
 ENC_T = 0.4;
@@ -31,7 +33,6 @@ echo(ED);
 
 CP = 102.5; // MicroSD card placement
 
-LAYER_H = 0.2; // Print layer thickness
 LAYER_W = 0.4; // Print layer thickness
 
 BOTTOM_H = 4; // Height of bottom piece
@@ -152,19 +153,19 @@ module Top()
 {
   if(FOR_PRINT)
   {
-    //CaseRaft(3, LAYER_H);
     difference()
     {
       translate([0,0,0]) cylinder(d=W+ENC_T, h=BZPOS);
       translate([0,0,-1]) cylinder(d=43+ENC_T, h=BZPOS+2);
       translate([-80/2,0,-1]) cube([80,40,H+T*2+1]);
       // Support
-      difference()
-      {
-        translate([0,0,-1]) cylinder(d=W+ENC_T+1, h=BZPOS+2);
-        translate([0,0,-2]) cylinder(d=43+ENC_T+LAYER_W*2, h=BZPOS+4);
-        translate([-80/2,-LAYER_W,-2]) cube([80,40,BZPOS+4]);
-      }
+      // this does not do anything?
+      // difference()
+      // {
+      //   translate([0,0,-1]) cylinder(d=W+ENC_T+1, h=BZPOS+2);
+      //   translate([0,0,-2]) cylinder(d=43+ENC_T+LAYER_W*2, h=BZPOS+4);
+      //   translate([-80/2,-LAYER_W,-2]) cube([80,40,BZPOS+4]);
+      // }
     }
   }
   // Case shell
@@ -246,9 +247,9 @@ module Top()
       //#translate([W/2-9,CP,BZPOS+BT]) cube([13,20,9]);
       // Debug port cutout(connector only)
       translate([W/2-9,106.3-18.2/2,BZPOS+BT+1.2]) cube([15,18.2,8.4]);
-      //translate([W/2-9,106.3-4.8/2,BZPOS+BT+1.2+6.4+LAYER_H]) cube([15,4.8,0.6-LAYER_H]);
+      //translate([W/2-9,106.3-4.8/2,BZPOS+BT+1.2+6.4]) cube([15,4.8,0.6]);
     }
-    // Buttons holes
+    // Button holes
     if(DRAW_BUTTON_HOLES || FOR_PRINT)
     {
       // Right button hole
@@ -273,10 +274,10 @@ module Top()
       }
     }
     // LEDs
-    translate([-15.8,BL-(BW-SW)/2+0.5+1.2,LAYER_H]) cylinder(d=1, h=H+2);
-    translate([2.65,BL-(BW-SW)/2+0.5+1.2,LAYER_H]) cylinder(d=1, h=H+2);
-    translate([10.55,BL-(BW-SW)/2+0.5+1.2,LAYER_H]) cylinder(d=1, h=H+2);
-    translate([18.2,BL-(BW-SW)/2+0.5+1.2,LAYER_H]) cylinder(d=1, h=H+2);
+    translate([-15.8,BL-(BW-SW)/2+0.5+1.2, 0]) cylinder(d=LED_DIA, h=H+5);
+    translate([2.65,BL-(BW-SW)/2+0.5+1.2, 0]) cylinder(d=LED_DIA, h=H+2);
+    translate([10.55,BL-(BW-SW)/2+0.5+1.2, 0]) cylinder(d=LED_DIA, h=H+2);
+    translate([18.2,BL-(BW-SW)/2+0.5+1.2, 0]) cylinder(d=LED_DIA, h=H+2);
     // Cable hole
     translate([-BW/2+(13-8)/2,BL-2,H-8]) cube([8,10,H]);
     //translate([-W/4,BL-20,6+3]) rotate([-90,0,0]) cylinder(d=3.5, h=100);
@@ -294,7 +295,7 @@ module Top()
     translate([0,0,0]) cylinder(d=W+ENC_T, h=BZPOS);
     translate([0,0,0]) cylinder(d=43+ENC_T, h=H);
     // Nut hole
-    translate([0,-50.5/2,BZPOS+LAYER_H]) cylinder(d=3.2, h=H);
+    translate([0, -50.5/2, BZPOS]) cylinder(d=3.2, h=H);
     // Board holder near encoder
     difference()
     {
@@ -317,10 +318,6 @@ module Top()
 // *******************************************************************
 module Bottom()
 {
-  if(FOR_PRINT)
-  {
-    //CaseRaft(3, LAYER_H);
-  }
   difference()
   {
     union()
@@ -385,7 +382,7 @@ module Bottom()
   difference()
   {
     translate([0,-50.5/2,0]) cylinder(d=11.2, h=BOTTOM_H+H-(T+BZPOS));
-    translate([0,-50.5/2,BOTTOM_H+H-(BZPOS+6)+1+LAYER_H]) cylinder(d=3.2, h=100);
+    translate([0,-50.5/2,BOTTOM_H+H-(BZPOS+6)+1]) cylinder(d=3.2, h=100);
     translate([0,0,BOTTOM_H+H-(BZPOS+6)-1]) cylinder(d=43, h=H);
     translate([0,-50.5/2,-1]) cylinder(d=8, h=BOTTOM_H+H-(BZPOS+6)+1+1);
     difference()
@@ -433,7 +430,7 @@ module Button(S)
     translate([-7.3/S/2,-7.3/S/2,-0.1]) cube([7.3/S,7.3/S,1+2.4-1.2+0.1]);
     translate([0,0,0]) cylinder(d=4/S, h=1+2.4-0.6);
   }
-  //translate([0,0,2+2.4-1.5]) ButtonBase(LAYER_H, 2.3, 0);
+  //translate([0,0,2+2.4-1.5]) ButtonBase(0, 2.3, 0);
 }
       
 module ButtonBase(T, D, DR)
@@ -473,19 +470,6 @@ difference()
   translate([-W/2,-W/2,H]) cube([W,L,H]);
 }
 
-// *******************************************************************
-// ***   Case module   ***********************************************
-// *******************************************************************
-module CaseRaft(R, H)
-{
-  hull()
-  {
-    translate([W/2,BL,0]) cylinder(r=R, h=H);
-    translate([-W/2,BL,0]) cylinder(r=R, h=H);
-    cylinder(d=W+R*2, h=H);
-  }
-}
-    
 // *******************************************************************
 // ***   Case module   ***********************************************
 // *******************************************************************
