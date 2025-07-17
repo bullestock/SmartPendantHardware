@@ -14,13 +14,13 @@ W = 60; // Width(encoder & board)
 L = 156+R*2; // Length(full length + two radiuses)
 H = 16; //-(T-1.6); //BZPOS+BT+9;
 
-LED_DIA = 1;
-
 // Encoder tolerance
 ENC_T = 0.4;
 
 // Encoder rim height
-ENC_RT = 5;
+ENC_RT = 6;
+
+ENC_OFFSET = -5;
 
 BW = 60; // Board Width
 BL = 126; // Board Length(from center of encoder to top edge)
@@ -163,9 +163,9 @@ module Top()
         difference()
         {
           // half torus to support encoder
-          translate([0, 0, ENC_RT]) cylinder(d=W+ENC_T, h=BZPOS);
-          translate([0,0,2]) cylinder(d=43+ENC_T, h=BZPOS+5);
-          translate([-80/2,0,-1]) cube([80,40,H+T*2+1]);
+          translate([0, ENC_OFFSET, ENC_RT]) cylinder(d=W+ENC_T, h=BZPOS);
+          translate([0, ENC_OFFSET, 2]) cylinder(d=43+ENC_T, h=BZPOS+5);
+          translate([-80/2, ENC_OFFSET, -1]) cube([80, 40, H+T*2+1]);
         }
       }
       // Case shell
@@ -175,16 +175,18 @@ module Top()
         {
           difference()
           {
-            Case(W+R*2, L, H, R);
-            translate([0,0,T]) Case(W+R*2-T*2, L-T*2, H, R-T);
+            // Case profile
+            Case(W+R*2, L - ENC_OFFSET, H, R);
+            // Make shell
+            translate([0, 0, T]) Case(W+R*2-T*2, L - T*2 - ENC_OFFSET, H, R-T);
           }
           // Central support (between encoder and display hole)
           hull()
           {
-            translate([-12,W/2+ED/2,0]) cylinder(d=ED, h=BZPOS-0.6);
-            translate([+12,W/2+ED/2,0]) cylinder(d=ED, h=BZPOS-0.6);
+            translate([-12, W/2+ED/2, 0]) cylinder(d=ED, h=BZPOS-0.6);
+            translate([+12, W/2+ED/2, 0]) cylinder(d=ED, h=BZPOS-0.6);
           }
-          translate([-BW/2-(R-T),W/2+ED-1.2,T]) cube([W+(R-T)*2,1.2,BZPOS-T-0.6]);
+          translate([-BW/2-(R-T), W/2+ED-1.2, T]) cube([W+(R-T)*2, 1.2, BZPOS-T-0.6]);
           // PCB side support
           difference()
           {
@@ -201,7 +203,7 @@ module Top()
         translate([-W/2-R+0.4,55.8,BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0,90,0]) ScrewHoleUp(15);
         translate([W/2+R-0.4,55.8,BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0,-90,0]) ScrewHoleUp(15);
         // Encoder hole
-        translate([0, 0, -1]) cylinder(d=W+ENC_T, h=H);
+        translate([0, ENC_OFFSET, -1]) cylinder(d=W+ENC_T, h=H);
         // Display
         translate([-SW/2, ED+W/2-3, -1]) cube([SW, SH, H]);
         translate([-SW/2, BL-6, 1.4]) cube([SW, 6, H]);
@@ -257,11 +259,6 @@ module Top()
             translate([+8.4/2-2.5/2,0,0]) cylinder(d=7, h=17);
           }
         }
-        // LEDs
-        translate([-15.8,BL-(BW-SW)/2+0.5+1.2, 0]) cylinder(d=LED_DIA, h=H+5);
-        translate([2.65,BL-(BW-SW)/2+0.5+1.2, 0]) cylinder(d=LED_DIA, h=H+2);
-        translate([10.55,BL-(BW-SW)/2+0.5+1.2, 0]) cylinder(d=LED_DIA, h=H+2);
-        translate([18.2,BL-(BW-SW)/2+0.5+1.2, 0]) cylinder(d=LED_DIA, h=H+2);
         // Cable hole
         translate([-BW/2+(13-8)/2, BL-2, H-GLAND_H]) cube([GLAND_W, 10, H]);
         //translate([-W/4,BL-20,6+3]) rotate([-90,0,0]) cylinder(d=3.5, h=100);
@@ -271,13 +268,13 @@ module Top()
       {
         union()
         {
-          translate([0,0,T]) cylinder(d=W+R*2, h=BZPOS);
-          //translate([-(W+R*2-T*2)/2,0,T]) cube([W+R*2-T*2,W/2,BZPOS]);
+          //translate([0, ENC_OFFSET, T]) cylinder(d=W+R*2, h=BZPOS);
+          translate([-(W+R*2-T*2)/2, 0, T]) cube([W+R*2-T*2, W/2, BZPOS]);
         }
         // Cutout for encoder rim
-        translate([0,0,0]) cylinder(d=W+ENC_T, h=BZPOS);
+        translate([0, ENC_OFFSET, 0]) cylinder(d=W+ENC_T, h=BZPOS);
         // Cutout for encoder terminals
-        translate([0,0,0]) cylinder(d=43+ENC_T, h=H);
+        translate([0, ENC_OFFSET, 0]) cylinder(d=43+ENC_T, h=H);
         // Board holder near encoder
         difference()
         {
@@ -285,11 +282,11 @@ module Top()
           translate([-80/2,-40,-1]) cube([80,40,H+T*2+1]);
         }
         translate([-80/2,23,-1]) cube([80,40,H+T*2+1]);
-        translate([-80/2,0,BZPOS]) cube([80,40,H]);
+        translate([-80/2, 0, BZPOS]) cube([80,40,H]);
       }
     }
     // Screw hole
-    translate([0, -50.5/2, 0]) cylinder(d=3.2, h=H);
+    translate([0, -50.5/2 + ENC_OFFSET, 0]) cylinder(d=3.2, h=H);
   }
 }
 
@@ -403,16 +400,17 @@ module Bottom()
 module Case(W, L, H, R)
 difference()
 {
-  translate([0,0,R]) minkowski()
+  translate([0, ENC_OFFSET, R]) minkowski()
   {
     hull()
     {
-      translate([-W/2+R,L-W/2-R-10,0]) cube([W-R*2,10,H-R]);
+      translate([-W/2+R, L-W/2-R-10, 0]) cube([W-R*2, 10, H-R]);
       cylinder(d=W-R*2, h=H-R);
     }
     sphere(r=R);
   }
-  translate([-W/2,-W/2,H]) cube([W,L,H]);
+  // Make top flat
+  translate([-W/2, -W/2 + ENC_OFFSET, H]) cube([W, L, H]);
 }
 
 // *******************************************************************
