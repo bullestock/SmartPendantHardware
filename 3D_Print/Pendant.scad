@@ -12,7 +12,7 @@ T = 2.4; // Case thickness
 R = 2.6; // Case radius
 W = 60; // Width(encoder & board)
 L = 156+R*2; // Length(full length + two radiuses)
-H = 16; //-(T-1.6); //BZPOS+BT+9;
+H = 20;
 
 // Encoder tolerance
 ENC_T = 0.4;
@@ -21,10 +21,11 @@ ENC_T = 0.4;
 ENC_RT = 6;
 
 ENC_OFFSET = -5;
+STANDOFF_C = 6;
 
 BW = 60; // Board Width
 BL = 126; // Board Length(from center of encoder to top edge)
-BT = 1.6; // Board thickness
+BT = 1.6+2; // Board thickness
 BZPOS = 4.4; // Board Z position if placed on table display face down
 
 SW = 54.5; // Screen width
@@ -48,8 +49,8 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-Top();
-//Bottom();
+//Top();
+Bottom();
 //translate([75,0,0]) Bottom();
 //translate([0,0,H+BOTTOM_H]) rotate([0,180,0]) Bottom();
 
@@ -304,21 +305,21 @@ module Bottom()
       {
         union()
         {
-          Case(W+R*2, L, BOTTOM_H, R);
-          translate([0,0,LOCK_H]) Case(W+R*2-T*2-0.4, L-T*2-0.2, BOTTOM_H, R-T);
+          Case(W+R*2, L - ENC_OFFSET, BOTTOM_H, R);
+          translate([0, 0, LOCK_H]) Case(W+R*2-T*2-0.4, L - ENC_OFFSET - T*2 - 0.2, BOTTOM_H, R-T);
         }
         translate([0,0,T])  Case(W+R*2-T*3, L-T*3, BOTTOM_H+T, R-T);
       }
       // Buttons
-      translate([0,77,0]) 
-      {
-        translate([+2.325,-15,0]) cylinder(d=3, h=6);
-        translate([-2.325,-15,0]) cylinder(d=3, h=6);
-        translate([+2.325,-40.7,0]) cylinder(d=3, h=6);
-        // LEDs
-        translate([+5,-41.7,0]) cylinder(d=1, h=6);
-        translate([-5,-41.7,0]) cylinder(d=1, h=6);
-      }
+      // translate([0,77,0]) 
+      // {
+      //   translate([+2.325,-15,0]) cylinder(d=3, h=6);
+      //   translate([-2.325,-15,0]) cylinder(d=3, h=6);
+      //   translate([+2.325,-40.7,0]) cylinder(d=3, h=6);
+      //   // LEDs
+      //   translate([+5,-41.7,0]) cylinder(d=1, h=6);
+      //   translate([-5,-41.7,0]) cylinder(d=1, h=6);
+      // }
     }
     // Debug port cutout(connector only)
     translate([-W/2-T-1,106.3-22/2,BOTTOM_H]) cube([15,22,8.4]);
@@ -332,13 +333,14 @@ module Bottom()
       translate([+5,-41.7,0]) cylinder(d=1, h=10);
       translate([-5,-41.7,0]) cylinder(d=1, h=10);
     }
-    // Ligntening
+    // Recess for encoder
     translate([0,0,1.2]) hull()
     {
       cylinder(d=44, h=10);
       translate([-(44-5)/2,W/2,0]) cylinder(d=5, h=10);
       translate([+(44-5)/2,W/2,0]) cylinder(d=5, h=10);
     }
+    // Recess
     translate([0,0,1.2]) hull()
     {
       translate([-(44-5)/2,70,0]) cylinder(d=5, h=10);
@@ -347,28 +349,31 @@ module Bottom()
       translate([+(44-5)/2,BL-12,0]) cylinder(d=5, h=10);
     }
     // Nut hole
-    translate([0,-50.5/2,-1]) cylinder(d=3.2, h=100);
-    translate([0,-50.5/2,-1]) cylinder(d=8, h=BZPOS+6+1);
+    //translate([0,-50.5/2,-1]) cylinder(d=3.2, h=100);
+    translate([0, -50.5/2 + ENC_OFFSET, -1]) cylinder(d=8, h=BZPOS+6+1);
     //translate([0,-50.5/2,0]) cylinder(d=7.7, h=H);
-    //#translate([0,0,0]) cylinder(d=43, h=H);
   }
   // Debug port cutout(connector only)
   translate([-W/2,106.3-26/2,1.2]) cube([8,26,BOTTOM_H-1.2]);
   //translate([-W/2-R,106.3-26/2,BOTTOM_H]) cube([T,26,1.2]);
-  // Nut hole
+  // Standoff for encoder
   difference()
   {
-    translate([0,-50.5/2,0]) cylinder(d=11.2, h=BOTTOM_H+H-(T+BZPOS));
-    translate([0,-50.5/2,BOTTOM_H+H-(BZPOS+6)+1]) cylinder(d=3.2, h=100);
-    translate([0,0,BOTTOM_H+H-(BZPOS+6)-1]) cylinder(d=43, h=H);
-    translate([0,-50.5/2,-1]) cylinder(d=8, h=BOTTOM_H+H-(BZPOS+6)+1+1);
+    // Basic standoff shape
+    translate([0,-50.5/2 + ENC_OFFSET, 0]) cylinder(d=11.2, h=BOTTOM_H+H-(T+BZPOS) - STANDOFF_C);
+    // Screw hole
+    translate([0, -50.5/2 + ENC_OFFSET, 0]) cylinder(d=3.2, h=100);
+    // Cut off part of top
+    translate([0, ENC_OFFSET, BOTTOM_H+H-(BZPOS+6)-1 - STANDOFF_C]) cylinder(d=43, h=H - STANDOFF_C);
+    translate([0, -50.5/2 + ENC_OFFSET, -1]) cylinder(d=8, h=BOTTOM_H+H-(BZPOS+6)+1+1 - STANDOFF_C);
+    // Cut off bottom
     difference()
     {
-      translate([0,0,-1]) cylinder(d=W+2*R, h=H);
-      translate([0,0,-1]) cylinder(d=W, h=H);
+      translate([0, ENC_OFFSET, -1]) cylinder(d=W+2*R, h=H - STANDOFF_C);
+      translate([0, ENC_OFFSET, -1]) cylinder(d=W, h=H - STANDOFF_C);
     }
   }
-  // Top lock
+  // Top locks
   difference()
   {
     translate([BW/2-6-13,BL-3.5,0]) cube([6,3.5+(R-T),BOTTOM_H+H-BZPOS-BT]);
@@ -379,6 +384,7 @@ module Bottom()
     translate([-BW/2+13,BL-3.5,0]) cube([6,3.5+(R-T),BOTTOM_H+H-BZPOS-BT]);
     translate([-BW/2+13+6/2,0,BOTTOM_H+(H-BZPOS-BT)/2]) rotate([-90,0,0]) cylinder(d=2.6, h=200);
   }
+  // Middle locks
   difference()
   {
     union()
