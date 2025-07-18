@@ -22,6 +22,7 @@ ENC_RT = 6;
 
 ENC_OFFSET = -5;
 STANDOFF_C = 6;
+BUTTON_OFFSET = -3;
 
 BW = 60; // Board Width
 BL = 126; // Board Length(from center of encoder to top edge)
@@ -49,8 +50,8 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-//Top();
-Bottom();
+Top();
+//Bottom();
 //translate([75,0,0]) Bottom();
 //translate([0,0,H+BOTTOM_H]) rotate([0,180,0]) Bottom();
 
@@ -143,11 +144,11 @@ difference()
   
   hull()
   {
-    translate([X1,Y1,-0.1]) cylinder(d=D, h=T+0.2);
-    translate([X2,Y2,-0.1]) cylinder(d=D, h=T+0.2);
-    translate([SW/2-D/2,Y1,-0.1]) cylinder(d=D, h=T+0.2);
-    translate([SW/2-D/2,W/2+BUTTON_LEN-DFG-D/2,-0.1]) cylinder(d=D, h=T+0.2);
-    translate([X2,W/2+BUTTON_LEN-DFG-D/2,-0.1]) cylinder(d=D, h=T+0.2);
+    translate([X1, Y1, -0.1]) cylinder(d=D, h=T+0.2);
+    translate([X2, Y2,-0.1]) cylinder(d=D, h=T+0.2);
+    translate([SW/2-D/2, Y1, -0.1]) cylinder(d=D, h=T+0.2);
+    translate([SW/2-D/2, W/2+BUTTON_LEN-DFG-D/2, -0.1]) cylinder(d=D, h=T+0.2);
+    translate([X2, W/2+BUTTON_LEN-DFG-D/2, -0.1]) cylinder(d=D, h=T+0.2);
   }
   translate([0,0,-0.2]) cylinder(d=W+H*2, h=T+0.4);
 }
@@ -182,11 +183,8 @@ module Top()
             translate([0, 0, T]) Case(W+R*2-T*2, L - T*2 - ENC_OFFSET, H, R-T);
           }
           // Central support (between encoder and display hole)
-          hull()
-          {
-            translate([-12, W/2+ED/2, 0]) cylinder(d=ED, h=BZPOS-0.6);
-            translate([+12, W/2+ED/2, 0]) cylinder(d=ED, h=BZPOS-0.6);
-          }
+          translate([-22, W/2+ED/2, 0]) cylinder(d=ED, h=BZPOS-0.6);
+          translate([+22, W/2+ED/2, 0]) cylinder(d=ED, h=BZPOS-0.6);
           translate([-BW/2-(R-T), W/2+ED-1.2, T]) cube([W+(R-T)*2, 1.2, BZPOS-T-0.6]);
           // PCB side support
           difference()
@@ -197,6 +195,8 @@ module Top()
               translate([BW/2-2,W/2+ED,T]) cube([2+(R-T),BL-W/2-ED,BZPOS-T]);
             }
           }
+          // Display support
+          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 1]);
         }
         // Screw holes
         translate([BW/2-13-6/2,BL+R-0.4,BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90,0,0]) ScrewHoleUp(15);
@@ -207,7 +207,7 @@ module Top()
         translate([0, ENC_OFFSET, -1]) cylinder(d=W+ENC_T, h=H);
         // Display
         translate([-SW/2, ED+W/2-3, -1]) cube([SW, SH, H]);
-        translate([-SW/2, BL-6, 1.4]) cube([SW, 6, H]);
+        //translate([-SW/2, BL-6, 1.4]) cube([SW, 6, H]);
         // Down side buttons
         hull()
         {
@@ -235,14 +235,6 @@ module Top()
           // Debug port cutout(connector only)
           translate([W/2-9,106.3-18.2/2,BZPOS+BT+1.2]) cube([15,18.2,8.4]);
           //translate([W/2-9,106.3-4.8/2,BZPOS+BT+1.2+6.4]) cube([15,4.8,0.6]);
-        }
-        // Button holes
-        if(DRAW_BUTTON_HOLES || FOR_PRINT)
-        {
-          // Right button hole
-          ButtonHole(2.8, 3);
-          // Left button hole
-          mirror([1,0,0]) ButtonHole(2.8, 3);
         }
         // USB-C 
         translate([2.9,BL,BZPOS+BT+2]) // Z was + (2.5/2+0.5) which is 1.75, rounded to 1.7
@@ -282,12 +274,16 @@ module Top()
           translate([0,0,0]) cylinder(d=W+ENC_T, h=H);
           translate([-80/2,-40,-1]) cube([80,40,H+T*2+1]);
         }
-        translate([-80/2,23,-1]) cube([80,40,H+T*2+1]);
-        translate([-80/2, 0, BZPOS]) cube([80,40,H]);
+        translate([-80/2, 18, -5]) cube([80,40,H+T*2+1]);
+        translate([-80/2, 0, BZPOS]) cube([80, 40, H]);
       }
     }
     // Screw hole
     translate([0, -50.5/2 + ENC_OFFSET, 0]) cylinder(d=3.2, h=H);
+    // Right button hole
+    translate([0, -5, 0]) ButtonHole(2.8, 3);
+    // Left button hole
+    translate([0, -5, 0]) mirror([1,0,0]) ButtonHole(2.8, 3);
   }
 }
 
