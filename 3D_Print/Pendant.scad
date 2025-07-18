@@ -53,7 +53,7 @@ LOCK_H = 1.6; // Lock height
 Top();
 //Bottom();
 //translate([75,0,0]) Bottom();
-//translate([0,0,H+BOTTOM_H]) rotate([0,180,0]) Bottom();
+//translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 
 //Board();
 
@@ -165,9 +165,9 @@ module Top()
         difference()
         {
           // half torus to support encoder
-          translate([0, ENC_OFFSET, ENC_RT]) cylinder(d=W+ENC_T, h=BZPOS);
+          translate([0, ENC_OFFSET, ENC_RT]) cylinder(d=W+ENC_T, h=3);
           translate([0, ENC_OFFSET, 2]) cylinder(d=43+ENC_T, h=BZPOS+5);
-          translate([-80/2, ENC_OFFSET, -1]) cube([80, 40, H+T*2+1]);
+          translate([-80/2, ENC_OFFSET + 5, -1]) cube([80, 40, H+T*2+1]);
         }
       }
       // Case shell
@@ -196,7 +196,7 @@ module Top()
             }
           }
           // Display support
-          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 1]);
+          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 0.5]);
         }
         // Screw holes
         translate([BW/2-13-6/2,BL+R-0.4,BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90,0,0]) ScrewHoleUp(15);
@@ -237,7 +237,7 @@ module Top()
           //translate([W/2-9,106.3-4.8/2,BZPOS+BT+1.2+6.4]) cube([15,4.8,0.6]);
         }
         // USB-C 
-        translate([2.9,BL,BZPOS+BT+2]) // Z was + (2.5/2+0.5) which is 1.75, rounded to 1.7
+        translate([2.9,BL,BZPOS+BT+6])
         {
           // Connector hole
           translate([0,-1,0]) rotate([-90,0,0]) hull()
@@ -253,7 +253,7 @@ module Top()
           }
         }
         // Cable hole
-        translate([-BW/2+(13-8)/2, BL-2, H-GLAND_H]) cube([GLAND_W, 10, H]);
+        translate([-BW/2+(13-8)/2, BL-2, H-GLAND_H-1.5]) cube([GLAND_W, 10, H]);
         //translate([-W/4,BL-20,6+3]) rotate([-90,0,0]) cylinder(d=3.5, h=100);
       }
       // Encoder
@@ -275,7 +275,7 @@ module Top()
           translate([-80/2,-40,-1]) cube([80,40,H+T*2+1]);
         }
         translate([-80/2, 18, -5]) cube([80,40,H+T*2+1]);
-        translate([-80/2, 0, BZPOS]) cube([80, 40, H]);
+        translate([-80/2, 10, BZPOS]) cube([80, 40, H]);
       }
     }
     // Screw hole
@@ -304,7 +304,9 @@ module Bottom()
           Case(W+R*2, L - ENC_OFFSET, BOTTOM_H, R);
           translate([0, 0, LOCK_H]) Case(W+R*2-T*2-0.4, L - ENC_OFFSET - T*2 - 0.2, BOTTOM_H, R-T);
         }
-        translate([0,0,T])  Case(W+R*2-T*3, L-T*3, BOTTOM_H+T, R-T);
+        translate([0, 2.5, T])  Case(W+R*2-T*3, L-T*3, BOTTOM_H+T, R-T);
+        // Gland cutout
+        translate([17, L-W/2-13.2, T+1.6]) cube([12, 6, 5]);
       }
       // Buttons
       // translate([0,77,0]) 
