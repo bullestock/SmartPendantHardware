@@ -50,8 +50,8 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-Top();
-//Bottom();
+//Top();
+Bottom();
 //translate([75,0,0]) Bottom();
 //translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 
@@ -321,15 +321,15 @@ module Bottom()
     }
     // Debug port cutout(connector only)
     translate([-W/2-T-1,106.3-22/2,BOTTOM_H]) cube([15,22,8.4]);
-    // Buttons
+    // Button holes
     translate([0,77,-1]) 
     {
       translate([+2.325,-15,0]) cylinder(d=3, h=10);
       translate([-2.325,-15,0]) cylinder(d=3, h=10);
-      translate([+2.325,-40.7,0]) cylinder(d=3, h=10);
+      //translate([+2.325,-40.7,0]) cylinder(d=3, h=10);
       // LEDs
-      translate([+5,-41.7,0]) cylinder(d=1, h=10);
-      translate([-5,-41.7,0]) cylinder(d=1, h=10);
+      translate([+5,-41.7,0]) cylinder(d=1.5, h=10);
+      translate([-5,-41.7,0]) cylinder(d=1.5, h=10);
     }
     // Recess for encoder
     translate([0,0,1.2]) hull()
