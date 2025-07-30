@@ -48,8 +48,8 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-Top();
-//Bottom();
+//Top();
+Bottom();
 //translate([75,0,0]) Bottom();
 //translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 

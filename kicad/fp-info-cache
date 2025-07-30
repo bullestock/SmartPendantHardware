@@ -1,4 +1,4 @@
-22261325273685266
+22264833044172925
 Battery
 BatteryClip_Keystone_54_D16-19mm
 Battery clip for batteries with a diameter between 16-19 mm: https://www.keyelco.com/product.cfm/product_id/826
@@ -9359,12 +9359,26 @@ Mini USB 2.0 Type B
 9
 6
 Custom
+BlackPill_STLINK
+STM32F4-based development board with ST-LINK header
+stm32 arm
+0
+44
+44
+Custom
 J_SD_Card-micro_socket_A
 SD Card Socket, Olimex, MICRO-SD-CARD 
 
 0
 13
 10
+Custom
+PinSocket_1x14_P2.54mm_Vertical_SMD_Pin1Left_TH
+surface-mounted straight socket strip, 1x14, 2.54mm pitch, single row, style 1 (pin 1 left) (https://cdn.harwin.com/pdfs/M20-786.pdf), script generated
+Surface mounted socket strip SMD 1x14 2.54mm single row style1 pin1 left
+0
+14
+14
 Custom
 USB_C_Receptacle_AliExpress_16pin
 USB Type C, right-angle, SMT, https://datasheet.lcsc.com/szlcsc/1811141824_XKB-Enterprise-U262-161N-4BVC11_C319148.pdf
