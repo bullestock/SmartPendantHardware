@@ -8,4 +8,5 @@
   (lib (name "Switch")(type "KiCad")(uri "${KIPRJMOD}/symbols/Switch.kicad_sym")(options "")(descr ""))
   (lib (name "blackpill_stlink")(type "KiCad")(uri "${KIPRJMOD}/symbols/blackpill_stlink.kicad_sym")(options "")(descr ""))
   (lib (name "Regulator_Linear")(type "KiCad")(uri "${KIPRJMOD}/symbols/Regulator_Linear.kicad_sym")(options "")(descr ""))
+  (lib (name "Memory_NVRAM")(type "KiCad")(uri "${KIPRJMOD}/symbols/Memory_NVRAM.kicad_sym")(options "")(descr ""))
 )
