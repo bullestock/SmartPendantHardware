@@ -10,4 +10,5 @@
   (lib (name "Custom")(type "KiCad")(uri "${KIPRJMOD}/footprints/Custom.pretty")(options "")(descr ""))
   (lib (name "SmartPendant")(type "KiCad")(uri "${KIPRJMOD}/footprints/SmartPendant.pretty")(options "")(descr ""))
   (lib (name "Connector_IDC")(type "KiCad")(uri "${KIPRJMOD}/footprints/Connector_IDC.pretty")(options "")(descr ""))
+  (lib (name "Connector_PinSocket_2.54mm")(type "KiCad")(uri "${KIPRJMOD}/footprints/Connector_PinSocket_2.54mm.pretty")(options "")(descr ""))
 )
