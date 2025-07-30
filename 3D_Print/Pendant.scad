@@ -12,7 +12,7 @@ T = 2.4; // Case thickness
 R = 2.6; // Case radius
 W = 60; // Width(encoder & board)
 L = 156+R*2; // Length(full length + two radiuses)
-H = 20;
+H = 16;
 
 // Encoder tolerance
 ENC_T = 0.4;
@@ -26,11 +26,11 @@ BUTTON_OFFSET = -3;
 
 BW = 60; // Board Width
 BL = 126; // Board Length(from center of encoder to top edge)
-BT = 1.6+2; // Board thickness
+BT = 1.6; // Board thickness
 BZPOS = 4.4; // Board Z position if placed on table display face down
 
-SW = 54.5; // Screen width
-SH = 85.5; // Screen height
+SW = 55.5; // Screen width
+SH = 89.0; // Screen height
 //SH = 88.8; // old
 BZW = 51.5; // Bezel width
 BZH = 78.0; // Bezel height
@@ -42,16 +42,14 @@ GLAND_H = 5;
 //ED = 4.2; // Distance betweeen encoder edge and screen glass
 ED = BL - BW/2 - SH - (BW - SW)/2;
 
-echo(ED);
-
 CP = 102.5; // MicroSD card placement
 
 BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-//Top();
-Bottom();
+Top();
+//Bottom();
 //translate([75,0,0]) Bottom();
 //translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 
@@ -183,8 +181,8 @@ module Top()
             translate([0, 0, T]) Case(W+R*2-T*2, L - T*2 - ENC_OFFSET, H, R-T);
           }
           // Central support (between encoder and display hole)
-          translate([-22, W/2+ED/2, 0]) cylinder(d=ED, h=BZPOS-0.6);
-          translate([+22, W/2+ED/2, 0]) cylinder(d=ED, h=BZPOS-0.6);
+          translate([-22, W/2+ED/2 - 1, 0]) cylinder(d=ED, h=BZPOS + 0.4);
+          translate([+22, W/2+ED/2 - 1, 0]) cylinder(d=ED, h=BZPOS + 0.4);
           translate([-BW/2-(R-T), W/2+ED-1.2, T]) cube([W+(R-T)*2, 1.2, BZPOS-T-0.6]);
           // PCB side support
           difference()
@@ -196,7 +194,7 @@ module Top()
             }
           }
           // Display support
-          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 0.5]);
+          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 2]);
         }
         // Screw holes
         translate([BW/2-13-6/2,BL+R-0.4,BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90,0,0]) ScrewHoleUp(15);
@@ -206,7 +204,7 @@ module Top()
         // Encoder hole
         translate([0, ENC_OFFSET, -1]) cylinder(d=W+ENC_T, h=H);
         // Display
-        translate([-SW/2, ED+W/2-3, -1]) cube([SW, SH, H]);
+        translate([-SW/2, ED+W/2 - 4, -1]) cube([SW, SH, H]);
         //translate([-SW/2, BL-6, 1.4]) cube([SW, 6, H]);
         // Down side buttons
         hull()
