@@ -6517,6 +6517,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 246.38) (xy 195.58 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02018c5b-e4a3-4ee2-bf7c-9c658399c724")
+	)
+	(wire
+		(pts
 			(xy 307.34 59.69) (xy 302.26 59.69)
 		)
 		(stroke
@@ -6987,16 +6997,6 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 38.1) (xy 90.17 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2dcd9902-64b8-4cd9-9748-658cbf63ba85")
-	)
-	(wire
-		(pts
 			(xy 283.21 55.88) (xy 283.21 52.07)
 		)
 		(stroke
@@ -7054,6 +7054,16 @@
 			(type default)
 		)
 		(uuid "332f117e-3bc4-49ef-bf03-e4ff036af2a5")
+	)
+	(wire
+		(pts
+			(xy 168.91 246.38) (xy 168.91 260.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33db0732-614e-4c45-8930-4982d7ea81c8")
 	)
 	(wire
 		(pts
@@ -8227,7 +8237,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 38.1) (xy 96.52 38.1)
+			(xy 168.91 246.38) (xy 175.26 246.38)
 		)
 		(stroke
 			(width 0)
@@ -9805,6 +9815,28 @@
 			)
 		)
 	)
+	(global_label "BAT"
+		(shape input)
+		(at 104.14 38.1 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "466fb4f1-d907-4811-9148-ad20fed92e46")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 97.8286 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "BUZZER"
 		(shape input)
 		(at 40.64 146.05 180)
@@ -10461,6 +10493,28 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BAT"
+		(shape input)
+		(at 195.58 246.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dfabcbca-ff4a-41a5-96db-2bf1840c7845")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 201.8914 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -11298,7 +11352,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "SmartPendant:SMD_Push_Side_button_3x6x3.5mm"
+		(property "Footprint" "Custom:SMD_Push_Side_button_3x6x3.5mm"
 			(at 252.73 161.29 0)
 			(effects
 				(font
@@ -11986,7 +12040,7 @@
 				(justify right top)
 			)
 		)
-		(property "Footprint" "SmartPendant:SMD_Push_Side_button_3x6x3.5mm"
+		(property "Footprint" "Custom:SMD_Push_Side_button_3x6x3.5mm"
 			(at 209.55 167.64 0)
 			(effects
 				(font
@@ -12240,7 +12294,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 90.17 40.64 0)
+		(at 168.91 260.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12249,7 +12303,7 @@
 		(fields_autoplaced yes)
 		(uuid "3a96f591-2bd1-4769-8fa6-3aaaeaa0be26")
 		(property "Reference" "#PWR06"
-			(at 90.17 46.99 0)
+			(at 168.91 266.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12258,7 +12312,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 90.17 45.72 0)
+			(at 168.91 265.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12266,7 +12320,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 40.64 0)
+			(at 168.91 260.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12275,7 +12329,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 40.64 0)
+			(at 168.91 260.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12284,7 +12338,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 90.17 40.64 0)
+			(at 168.91 260.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13261,7 +13315,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "SmartPendant:SMD_Push_Side_button_3x6x3.5mm"
+		(property "Footprint" "Custom:SMD_Push_Side_button_3x6x3.5mm"
 			(at 280.67 161.29 0)
 			(effects
 				(font
@@ -14582,7 +14636,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "SmartPendant:SMD_Push_Side_button_3x6x3.5mm"
+		(property "Footprint" "Custom:SMD_Push_Side_button_3x6x3.5mm"
 			(at 299.72 186.69 0)
 			(effects
 				(font
@@ -16279,16 +16333,15 @@
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 99.06 38.1 270)
+		(at 177.8 246.38 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c0f03fc2-8241-4963-8263-b921b488c725")
 		(property "Reference" "BT1"
-			(at 100.9015 30.48 90)
+			(at 175.26 245.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16296,7 +16349,7 @@
 			)
 		)
 		(property "Value" "CR1220"
-			(at 100.9015 33.02 90)
+			(at 179.07 242.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16304,7 +16357,7 @@
 			)
 		)
 		(property "Footprint" "Custom:CR1220_Battery_Holder"
-			(at 100.584 38.1 90)
+			(at 179.324 246.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16313,7 +16366,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 100.584 38.1 90)
+			(at 179.324 246.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16322,7 +16375,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 99.06 38.1 0)
+			(at 177.8 246.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19093,7 +19146,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "SmartPendant:SMD_Push_Side_button_3x6x3.5mm"
+		(property "Footprint" "Custom:SMD_Push_Side_button_3x6x3.5mm"
 			(at 236.22 186.69 0)
 			(effects
 				(font
