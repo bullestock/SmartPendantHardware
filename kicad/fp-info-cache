@@ -1,4 +1,4 @@
-22513631690351536
+22515385834682382
 Battery
 BatteryClip_Keystone_54_D16-19mm
 Battery clip for batteries with a diameter between 16-19 mm: https://www.keyelco.com/product.cfm/product_id/826
@@ -9372,6 +9372,13 @@ CR1220_Battery_Holder
 0
 2
 2
+Custom
+JST_XH_S5B-XH-A_1x05_P2.50mm_Horizontal_Compact
+JST XH series connector, S5B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator
+connector JST XH horizontal
+0
+5
+5
 Custom
 J_SD_Card-micro_socket_A
 SD Card Socket, Olimex, MICRO-SD-CARD 

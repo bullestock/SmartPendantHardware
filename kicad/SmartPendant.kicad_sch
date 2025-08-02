@@ -3299,7 +3299,7 @@
 					)
 				)
 			)
-			(property "Footprint" "FPT-8P-M02_FUJ"
+			(property "Footprint" "PCM_Package_SO_AKL:SOP-8_3.9x4.9mm_P1.27mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3326,14 +3326,6 @@
 						(size 1.27 1.27)
 					)
 					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
 				)
 			)
 			(property "ki_keywords" "MB85RC256VPNF-G-JNERE1"
@@ -5890,16 +5882,6 @@
 			)
 		)
 		(uuid "748ef999-f230-4825-b468-3b3ba17a7297")
-	)
-	(text "Encoder"
-		(exclude_from_sim no)
-		(at 195.58 53.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "7afcac73-d951-4d97-92d6-c67e8b2ac224")
 	)
 	(junction
 		(at 260.35 171.45)
@@ -12228,7 +12210,7 @@
 				)
 			)
 		)
-		(property "Footprint" "FPT-8P-M02_FUJ"
+		(property "Footprint" "PCM_Package_SO_AKL:SOP-8_3.9x4.9mm_P1.27mm"
 			(at 31.75 196.85 0)
 			(effects
 				(font
@@ -15417,7 +15399,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical"
+		(property "Footprint" "Custom:JST_XH_S5B-XH-A_1x05_P2.50mm_Horizontal_Compact"
 			(at 314.96 104.14 0)
 			(effects
 				(font
@@ -18084,7 +18066,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x05"
+		(property "Value" "Encoder"
 			(at 199.39 63.4999 0)
 			(effects
 				(font
@@ -18093,7 +18075,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical"
+		(property "Footprint" "Custom:JST_XH_S5B-XH-A_1x05_P2.50mm_Horizontal_Compact"
 			(at 196.85 62.23 0)
 			(effects
 				(font
