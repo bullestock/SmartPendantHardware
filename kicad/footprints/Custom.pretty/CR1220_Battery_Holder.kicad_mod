@@ -1,15 +1,128 @@
-(module CR1220_Battery_Holder (layer F.Cu) (tedit 5B069FFC)
-  (fp_text reference REF** (at 0 0.5) (layer F.SilkS)
-    (effects (font (size 1 1) (thickness 0.15)))
-  )
-  (fp_text value CR1220_Battery_Holder (at 0 -0.5) (layer F.Fab)
-    (effects (font (size 1 1) (thickness 0.15)))
-  )
-  (fp_circle (center -0.0635 0) (end 6.6675 3.302) (layer F.SilkS) (width 0.15))
-  (fp_line (start 1.7145 7.493) (end 8.4455 7.493) (layer F.SilkS) (width 0.15))
-  (fp_line (start 8.4455 7.493) (end 8.4455 4.8895) (layer F.SilkS) (width 0.15))
-  (fp_line (start -1.5875 7.493) (end -8.382 7.493) (layer F.SilkS) (width 0.15))
-  (fp_line (start -8.382 7.493) (end -8.382 4.7625) (layer F.SilkS) (width 0.15))
-  (pad 2 smd rect (at 0.0635 -7.62) (size 3 5) (layers F.Cu F.Paste F.Mask))
-  (pad 1 smd rect (at 0.0635 7.4295) (size 3 5) (layers F.Cu F.Paste F.Mask))
+(footprint "CR1220_Battery_Holder"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 0.5 0)
+		(layer "F.SilkS")
+		(uuid "794e60b9-f39b-413f-94fc-815e1178667e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CR1220_Battery_Holder"
+		(at 0 -0.5 0)
+		(layer "F.Fab")
+		(uuid "06fb2361-0ac5-4785-94ee-8ba4509c685c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "253115e3-1062-49b3-a8b0-1259d1862282")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "21c795c1-234a-44f4-a64a-32b4c93645bc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -8.382 7.493)
+		(end -8.382 4.7625)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2dbad02c-e143-4f06-8daa-98587dbb52d9")
+	)
+	(fp_line
+		(start -1.5875 7.493)
+		(end -8.382 7.493)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d957dae7-803a-46a2-b26f-dd8598651d55")
+	)
+	(fp_line
+		(start 1.7145 7.493)
+		(end 8.4455 7.493)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6ef2b8b4-b112-4033-aa65-befb4955396f")
+	)
+	(fp_line
+		(start 8.4455 7.493)
+		(end 8.4455 4.8895)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ab2269d-40d4-490c-bc01-562b5a1f5c35")
+	)
+	(fp_arc
+		(start -2 7.2)
+		(mid -7.5 0)
+		(end -2 -7.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "149c2253-1e74-407f-84d4-83147c7be2a7")
+	)
+	(fp_arc
+		(start 2 -7.2)
+		(mid 7.5 0)
+		(end 2 7.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6d556bd4-69f8-49f9-a3c3-b16d023bc23a")
+	)
+	(pad "1" smd rect
+		(at 0.0635 7.4295)
+		(size 3 5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "47c0ae70-4b10-4e92-bf3c-23af5357ae56")
+	)
+	(pad "2" smd rect
+		(at 0.0635 -7.62)
+		(size 3 5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "90fe7f5f-3a12-44fe-9be0-2378f7761412")
+	)
+	(embedded_fonts no)
 )

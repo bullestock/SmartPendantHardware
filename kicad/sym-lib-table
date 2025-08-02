@@ -9,4 +9,6 @@
   (lib (name "blackpill_stlink")(type "KiCad")(uri "${KIPRJMOD}/symbols/blackpill_stlink.kicad_sym")(options "")(descr ""))
   (lib (name "Regulator_Linear")(type "KiCad")(uri "${KIPRJMOD}/symbols/Regulator_Linear.kicad_sym")(options "")(descr ""))
   (lib (name "Transistor_BJT")(type "KiCad")(uri "${KIPRJMOD}/symbols/Transistor_BJT.kicad_sym")(options "")(descr ""))
+  (lib (name "Connector")(type "KiCad")(uri "${KIPRJMOD}/symbols/Connector.kicad_sym")(options "")(descr ""))
+  (lib (name "MB85RC256VPNF")(type "KiCad")(uri "${KIPRJMOD}/symbols/MB85RC256VPNF.kicad_sym")(options "")(descr ""))
 )
