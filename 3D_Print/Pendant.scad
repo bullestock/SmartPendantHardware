@@ -62,7 +62,7 @@ module PCB(H)
 {
   color("purple") difference()
   {
-    translate([0,0,BZPOS]) linear_extrude(height=H)
+    translate([0,0, BZPOS]) linear_extrude(height=H)
       polygon(points=[[-30,0],[-30,65],[-28.6,67.5],[-28.6,94],[-30,96.5],[-30,126],
                       [30,126],[30,96.5],[28.6,94],[28.6,67.5],[30,65],[30,0]]);
     translate([0,0,0]) cylinder(d=43, h=H);
@@ -75,25 +75,25 @@ module PCB(H)
 module Board()
 {
   PCB(BT);
-  translate([-57.2/2,73.2,BZPOS+BT+4]) rotate([0,90,0]) cylinder(d=3.5, h=57.2); // Down buttons
-  translate([-57.2/2,88.3,BZPOS+BT+4]) rotate([0,90,0]) cylinder(d=3.5, h=57.2); // Up buttons
+  translate([-57.2/2,73.2, BZPOS+BT+4]) rotate([0, 90, 0]) cylinder(d=3.5, h=57.2); // Down buttons
+  translate([-57.2/2,88.3, BZPOS+BT+4]) rotate([0, 90, 0]) cylinder(d=3.5, h=57.2); // Up buttons
   // Top button
   translate([23.5,120,0])
   {
-    color("black") translate([0,0.1,BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=3.5, h=5); // Up buttons
-    color("silver") translate([-6.2/2,0,BZPOS+BT]) cube([6.2,4,6.2]);
+    color("black") translate([0,0.1, BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=3.5, h=5); // Up buttons
+    color("silver") translate([-6.2/2,0, BZPOS+BT]) cube([6.2,4,6.2]);
   }
   // Face L buttons
   translate([23.4,28.3,0])
   {
-    color("gold") translate([0,0,BZPOS-1.8]) cylinder(d=2, h=1.8); // Up buttons
-    color("silver") translate([-5.08/2,-5.08/2,BZPOS-1.4]) cube([5.08,5.08,1.4]);
+    color("gold") translate([0,0, BZPOS-1.8]) cylinder(d=2, h=1.8); // Up buttons
+    color("silver") translate([-5.08/2,-5.08/2, BZPOS-1.4]) cube([5.08,5.08,1.4]);
   }
   // Face R buttons
   translate([-23.5,28.4,0])
   {
-    color("gold") translate([0,0,BZPOS-1.8]) cylinder(d=2, h=1.8); // Up buttons
-    color("silver") translate([-5.08/2,-5.08/2,BZPOS-1.4]) cube([5.08,5.08,1.4]);
+    color("gold") translate([0,0, BZPOS-1.8]) cylinder(d=2, h=1.8); // Up buttons
+    color("silver") translate([-5.08/2,-5.08/2, BZPOS-1.4]) cube([5.08,5.08,1.4]);
   }
 }
 
@@ -106,13 +106,13 @@ module SideButtonRing(DO, DI, L, H)
   {
     hull()
     {
-      translate([-H/2,-L/2,0]) rotate([0,90,0]) cylinder(d=DO, h=H); // Up buttons
-      translate([-H/2,+L/2,0]) rotate([0,90,0]) cylinder(d=DO, h=H); // Up buttons
+      translate([-H/2,-L/2,0]) rotate([0, 90, 0]) cylinder(d=DO, h=H); // Up buttons
+      translate([-H/2,+L/2,0]) rotate([0, 90, 0]) cylinder(d=DO, h=H); // Up buttons
     }
     hull()
     {
-      translate([-H/2-1,-L/2,0]) rotate([0,90,0]) cylinder(d=DI, h=H+2); // Up buttons
-      translate([-H/2-1,+L/2,0]) rotate([0,90,0]) cylinder(d=DI, h=H+2); // Up buttons
+      translate([-H/2-1,-L/2,0]) rotate([0, 90, 0]) cylinder(d=DI, h=H+2); // Up buttons
+      translate([-H/2-1,+L/2,0]) rotate([0, 90, 0]) cylinder(d=DI, h=H+2); // Up buttons
     }
   }
 }
@@ -189,18 +189,18 @@ module Top()
           {
             union()
             {
-              translate([-BW/2-(R-T),W/2+ED,T]) cube([2+(R-T),BL-W/2-ED,BZPOS-T]);
-              translate([BW/2-2,W/2+ED,T]) cube([2+(R-T),BL-W/2-ED,BZPOS-T]);
+              translate([-BW/2-(R-T),W/2+ED,T]) cube([2+(R-T),BL-W/2-ED, BZPOS-T]);
+              translate([BW/2-2,W/2+ED,T]) cube([2+(R-T),BL-W/2-ED, BZPOS-T]);
             }
           }
           // Display support
           translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 2]);
         }
         // Screw holes
-        translate([BW/2-13-6/2,BL+R-0.4,BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90,0,0]) ScrewHoleUp(15);
-        translate([-BW/2+13+6/2,BL+R-0.4,BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90,0,0]) ScrewHoleUp(15);
-        translate([-W/2-R+0.4,55.8,BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0,90,0]) ScrewHoleUp(15);
-        translate([W/2+R-0.4,55.8,BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0,-90,0]) ScrewHoleUp(15);
+        translate([BW/2-13-6/2,BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90,0,0]) ScrewHoleUp(15);
+        translate([-BW/2+13+6/2,BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90,0,0]) ScrewHoleUp(15);
+        translate([-W/2-R+0.4, 55.8, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0, 90, 0]) ScrewHoleUp(15);
+        translate([W/2+R-0.4, 55.8, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0,-90,0]) ScrewHoleUp(15);
         // Encoder hole
         translate([0, ENC_OFFSET, -1]) cylinder(d=W+ENC_T, h=H);
         // Display
@@ -209,33 +209,33 @@ module Top()
         // Down side buttons
         hull()
         {
-          translate([-50,73.2-2,BZPOS+BT+4]) rotate([0,90,0]) cylinder(d=6, h=100);
-          translate([-50,73.2+2,BZPOS+BT+4]) rotate([0,90,0]) cylinder(d=6, h=100);
+          translate([-50, 73.2-2, BZPOS+BT+4]) rotate([0, 90, 0]) cylinder(d=6, h=100);
+          translate([-50, 73.2+2, BZPOS+BT+4]) rotate([0, 90, 0]) cylinder(d=6, h=100);
         }
         // Up side buttons
         hull()
         {
-          translate([-50,88.3-2,BZPOS+BT+4]) rotate([0,90,0]) cylinder(d=6, h=100);
-          translate([-50,88.3+2,BZPOS+BT+4]) rotate([0,90,0]) cylinder(d=6, h=100);
+          translate([-50, 88.3-2, BZPOS+BT+4]) rotate([0, 90, 0]) cylinder(d=6, h=100);
+          translate([-50, 88.3+2, BZPOS+BT+4]) rotate([0, 90, 0]) cylinder(d=6, h=100);
         }
         // Top button
         hull()
         {
-          translate([23.5-2,120,BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=6, h=300);
-          translate([23.5+2,120,BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=6, h=30);
+          translate([23.5-2,120, BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=6, h=300);
+          translate([23.5+2,120, BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=6, h=30);
         }
         // SD Card cutout
-        translate([-W,CP,BZPOS+BT+0.4]) cube([W,12,1.8]);
+        translate([-W,CP, BZPOS+BT+0.4]) cube([W,12,1.8]);
         if(DEBUG_PORT)
         {
           // Debug port cutout(full port)
-          //#translate([W/2-9,CP,BZPOS+BT]) cube([13,20,9]);
+          //#translate([W/2-9,CP, BZPOS+BT]) cube([13,20,9]);
           // Debug port cutout(connector only)
-          translate([W/2-9,106.3-18.2/2,BZPOS+BT+1.2]) cube([15,18.2,8.4]);
-          //translate([W/2-9,106.3-4.8/2,BZPOS+BT+1.2+6.4]) cube([15,4.8,0.6]);
+          translate([W/2-9,106.3-18.2/2, BZPOS+BT+1.2]) cube([15,18.2,8.4]);
+          //translate([W/2-9,106.3-4.8/2, BZPOS+BT+1.2+6.4]) cube([15,4.8,0.6]);
         }
         // USB-C 
-        translate([2.9,BL,BZPOS+BT+6])
+        translate([2.9, BL, BZPOS+BT+6])
         {
           // Connector hole
           translate([0,-1,0]) rotate([-90,0,0]) hull()
@@ -392,7 +392,7 @@ module Bottom()
         translate([BW/2-3.5-2,55.8-7/2,BOTTOM_H+H-BZPOS-BT-2]) cube([3.5,7,BOTTOM_H+H-BZPOS-BT]);
       }
     }
-    translate([-100,55.8,BOTTOM_H+(H-BZPOS-BT)/2]) rotate([0,90,0]) cylinder(d=2.6, h=200);
+    translate([-100, 55.8, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([0, 90, 0]) cylinder(d=2.6, h=200);
   }
 }
 
