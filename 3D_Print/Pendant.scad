@@ -127,28 +127,30 @@ function RotateY(X, Y, A) = X*sin(A) + Y*cos(A);
 // ***   Button Hole   ***********************************************
 // *******************************************************************
 module ButtonHole(DFG, D)
-// Left button hole
-difference()
 {
-  H = 3;
-  R = W/2+H+D/2;
+    // Left button hole
+    difference()
+    {
+        H = 3;
+        R = W/2+H+D/2;
 
-  BUTTON_LEN = 4.2;
+        BUTTON_LEN = 4.2;
 
-  Y1 = (W/2+BUTTON_LEN-DFG) - ((W/2+BUTTON_LEN-DFG)-28.3)*2 + D/2; // Find symmetrical bottom distance
-  X1 = sqrt(abs(Y1*Y1 - R*R));
-  X2 = SW/2 - (SW/2-23.4)*2;// + D/2;
-  Y2 = sqrt(abs(X2*X2 - R*R));
-  
-  hull()
-  {
-    translate([X1, Y1, -0.1]) cylinder(d=D, h=T+0.2);
-    translate([X2, Y2,-0.1]) cylinder(d=D, h=T+0.2);
-    translate([SW/2-D/2, Y1, -0.1]) cylinder(d=D, h=T+0.2);
-    translate([SW/2-D/2, W/2+BUTTON_LEN-DFG-D/2, -0.1]) cylinder(d=D, h=T+0.2);
-    translate([X2, W/2+BUTTON_LEN-DFG-D/2, -0.1]) cylinder(d=D, h=T+0.2);
-  }
-  translate([0,0,-0.2]) cylinder(d=W+H*2, h=T+0.4);
+        Y1 = (W/2+BUTTON_LEN-DFG) - ((W/2+BUTTON_LEN-DFG)-28.3)*2 + D/2; // Find symmetrical bottom distance
+        X1 = sqrt(abs(Y1*Y1 - R*R));
+        X2 = SW/2 - (SW/2-23.4)*2;// + D/2;
+        Y2 = sqrt(abs(X2*X2 - R*R));
+        
+        hull()
+        {
+            translate([X1, Y1, -0.1]) cylinder(d=D, h=T+0.2);
+            translate([X2, Y2,-0.1]) cylinder(d=D, h=T+0.2);
+            translate([SW/2-D/2, Y1, -0.1]) cylinder(d=D, h=T+0.2);
+            translate([SW/2-D/2, W/2+BUTTON_LEN-DFG-D/2, -0.1]) cylinder(d=D, h=T+0.2);
+            translate([X2, W/2+BUTTON_LEN-DFG-D/2, -0.1]) cylinder(d=D, h=T+0.2);
+        }
+        translate([0,0,-0.2]) cylinder(d=W+H*2, h=T+0.4);
+    }
 }
 
 // *******************************************************************
@@ -197,7 +199,9 @@ module Top()
           translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 2]);
         }
         // Screw holes
-        translate([BW/2-13-6/2, BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90, 0, 0]) ScrewHoleUp(15);
+        // - top button
+        translate([BW/2-13-6, BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90, 0, 0]) ScrewHoleUp(15);
+        // - USB
         translate([-BW/2+13+6/2, BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90, 0, 0]) ScrewHoleUp(15);
         translate([-W/2-R+0.4, 55.8, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0, 90, 0]) ScrewHoleUp(15);
         translate([W/2+R-0.4, 55.8, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0, -90, 0]) ScrewHoleUp(15);
@@ -221,11 +225,11 @@ module Top()
         // Top button
         hull()
         {
-          translate([23.5-2,120, BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=6, h=300);
-          translate([23.5+2,120, BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=6, h=30);
+          translate([20.5-2, 120, BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=6, h=300);
+          translate([20.5+2, 120, BZPOS+BT+4]) rotate([-90,0,0]) cylinder(d=6, h=30);
         }
         // SD Card cutout
-        translate([-W,CP, BZPOS+BT+0.4]) cube([W,12,1.8]);
+        translate([-W, CP, BZPOS+BT+1.8]) cube([W, 12, 1.8]);
         if(DEBUG_PORT)
         {
           // Debug port cutout(full port)
@@ -279,9 +283,9 @@ module Top()
     // Encoder screw hole
     translate([0, -50.5/2 + ENC_OFFSET, 0]) cylinder(d=3.5, h=H);
     // Right button hole
-    translate([0, -5, 0]) ButtonHole(2.8, 3);
+    translate([0, -5, 0]) ButtonHole(2.8, 2.2);
     // Left button hole
-    translate([0, -5, 0]) mirror([1,0,0]) ButtonHole(2.8, 3);
+    translate([0, -5, 0]) mirror([1,0,0]) ButtonHole(2.8, 2.2);
   }
 }
 
@@ -306,16 +310,6 @@ module Bottom()
         // Gland cutout
         translate([17, L-W/2-13.2, T+1.6]) cube([12, 6, 5]);
       }
-      // Buttons
-      // translate([0,77,0]) 
-      // {
-      //   translate([+2.325,-15,0]) cylinder(d=3, h=6);
-      //   translate([-2.325,-15,0]) cylinder(d=3, h=6);
-      //   translate([+2.325,-40.7,0]) cylinder(d=3, h=6);
-      //   // LEDs
-      //   translate([+5,-41.7,0]) cylinder(d=1, h=6);
-      //   translate([-5,-41.7,0]) cylinder(d=1, h=6);
-      // }
     }
     // Debug port cutout(connector only)
     translate([-W/2-T-1,106.3-22/2,BOTTOM_H]) cube([15,22,8.4]);
@@ -372,13 +366,13 @@ module Bottom()
   // Top locks
   difference()
   {
-    translate([BW/2-6-13,BL-3.5,0]) cube([6,3.5+(R-T),BOTTOM_H+H-BZPOS-BT]);
-    translate([BW/2-6-13+6/2,0,BOTTOM_H+(H-BZPOS-BT)/2]) rotate([-90,0,0]) cylinder(d=2.6, h=200);
+    translate([BW/2-6-13,BL-3.5,0]) cube([6, 3.5+(R-T), BOTTOM_H+H-BZPOS-BT]);
+    translate([BW/2-6-13+6/2, 0, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
   }
   difference()
   {
-    translate([-BW/2+13,BL-3.5,0]) cube([6,3.5+(R-T),BOTTOM_H+H-BZPOS-BT]);
-    translate([-BW/2+13+6/2,0,BOTTOM_H+(H-BZPOS-BT)/2]) rotate([-90,0,0]) cylinder(d=2.6, h=200);
+    translate([-BW/2+16, BL-3.5, 0]) cube([6, 3.5+(R-T), BOTTOM_H+H-BZPOS-BT]);
+    translate([-BW/2+16+6/2, 0, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
   }
   // Middle locks
   difference()
