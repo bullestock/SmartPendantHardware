@@ -54,30 +54,6 @@
 		)
 	)
 	(attr smd)
-	(fp_poly
-		(pts
-			(xy -3.9 0.7) (xy -3.9 2.2) (xy -2.3 2.2) (xy -2.3 1.6) (xy -3.2 1.6) (xy -3.2 0.7)
-		)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(fill yes)
-		(layer "F.Cu")
-		(uuid "f931f279-2e78-4f3a-abb3-0ecf0a94cf61")
-	)
-	(fp_poly
-		(pts
-			(xy 3.9 0.7) (xy 3.9 2.2) (xy 2.3 2.2) (xy 2.3 1.6) (xy 3.2 1.6) (xy 3.2 0.7)
-		)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(fill yes)
-		(layer "F.Cu")
-		(uuid "bbca3938-5f8d-41c1-b9ec-bfd13d551420")
-	)
 	(fp_line
 		(start -4.8 0.56)
 		(end -4.8 0.64)
@@ -237,6 +213,64 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.15)
 		(uuid "e140da40-ce5a-4bbc-90f0-8cab8354a4bb")
+	)
+	(pad "SH" smd custom
+		(at -3.1 1.85)
+		(size 0.7675 0.7675)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_rect
+				(start -0.15 -1.06625)
+				(end -0.8 -0.13375)
+				(width 0.2)
+				(fill yes)
+			)
+			(gr_poly
+				(pts
+					(xy 0.9 -0.268625) (xy 0.891237 -0.312681) (xy 0.866281 -0.350031) (xy 0.828931 -0.374987) (xy 0.784874 -0.383749)
+					(xy -0.784875 -0.38375) (xy -0.828931 -0.374987) (xy -0.866281 -0.350031) (xy -0.891237 -0.312681)
+					(xy -0.899999 -0.268624) (xy -0.9 0.268625) (xy -0.891237 0.312681) (xy -0.866281 0.350031) (xy -0.828931 0.374987)
+					(xy -0.784874 0.383749) (xy 0.784875 0.38375) (xy 0.828931 0.374987) (xy 0.866281 0.350031) (xy 0.891237 0.312681)
+					(xy 0.899999 0.268624)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "97709d54-5f50-4a8e-989b-2645c92caea2")
+	)
+	(pad "SH" smd custom
+		(at 3.1 1.85)
+		(size 0.7675 0.7675)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_rect
+				(start 0.15 -1.06625)
+				(end 0.8 -0.13375)
+				(width 0.2)
+				(fill yes)
+			)
+			(gr_poly
+				(pts
+					(xy -0.9 -0.268625) (xy -0.891237 -0.312681) (xy -0.866281 -0.350031) (xy -0.828931 -0.374987)
+					(xy -0.784874 -0.383749) (xy 0.784875 -0.38375) (xy 0.828931 -0.374987) (xy 0.866281 -0.350031)
+					(xy 0.891237 -0.312681) (xy 0.899999 -0.268624) (xy 0.9 0.268625) (xy 0.891237 0.312681) (xy 0.866281 0.350031)
+					(xy 0.828931 0.374987) (xy 0.784874 0.383749) (xy -0.784875 0.38375) (xy -0.828931 0.374987) (xy -0.866281 0.350031)
+					(xy -0.891237 0.312681) (xy -0.899999 0.268624)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "96c24b19-a213-4b67-8b43-94db4895670d")
 	)
 	(embedded_fonts no)
 	(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_SPST_CK_KMS2xxGP.step"
