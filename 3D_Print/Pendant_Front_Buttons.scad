@@ -28,7 +28,7 @@ module FrontButton(DB, DL, LR)
   H = 3;
   R = W/2+H+D/2;
 
-  Y1 = (W/2+ED-DFG) - ((W/2+ED-DFG)-28.3)*2 + D/2; // Fid simmetrical bottom distance
+  Y1 = (W/2+ED-DFG) - ((W/2+ED-DFG)-28.3)*2 + D/2; // Find symmetrical bottom distance
   X1 = sqrt(abs(Y1*Y1 - R*R));
   X2 = SW/2 - (SW/2-23.4)*2;// + D/2;
   Y2 = sqrt(abs(X2*X2 - R*R));
@@ -78,7 +78,7 @@ module Jig(DB, DL, LR, HEIGHT)
   H = 3;
   R = W/2+H+D/2;
 
-  Y1 = (W/2+ED-DFG) - ((W/2+ED-DFG)-28.3)*2 + D/2; // Fid simmetrical bottom distance
+  Y1 = (W/2+ED-DFG) - ((W/2+ED-DFG)-28.3)*2 + D/2; // Find symmetrical bottom distance
   X1 = sqrt(abs(Y1*Y1 - R*R));
   X2 = SW/2 - (SW/2-23.4)*2;// + D/2;
   Y2 = sqrt(abs(X2*X2 - R*R));
