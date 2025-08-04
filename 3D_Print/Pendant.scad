@@ -48,8 +48,8 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-//Top();
-Bottom();
+Top();
+//Bottom();
 //translate([75,0,0]) Bottom();
 //translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 
@@ -181,26 +181,26 @@ module Top()
             translate([0, 0, T]) Case(W+R*2-T*2, L - T*2 - ENC_OFFSET, H, R-T);
           }
           // Central support (between encoder and display hole)
-          translate([-22, W/2+ED/2 - 1, 0]) cylinder(d=ED, h=BZPOS + 0.4);
-          translate([+22, W/2+ED/2 - 1, 0]) cylinder(d=ED, h=BZPOS + 0.4);
-          translate([-BW/2-(R-T), W/2+ED-1.2, T]) cube([W+(R-T)*2, 1.2, BZPOS-T-0.6]);
+          translate([-18-2*ED, W/2+ED/2 - 4, 0]) cube([2*ED, ED, BZPOS - 0.1]);
+          translate([18, W/2+ED/2 - 4, 0]) cube([2*ED, ED, BZPOS - 0.1]);
+          //translate([-BW/2-(R-T), W/2+ED-1.2, T]) cube([W+(R-T)*2, 1.2, BZPOS-T-0.6]);
           // PCB side support
           difference()
           {
             union()
             {
-              translate([-BW/2-(R-T),W/2+ED,T]) cube([2+(R-T),BL-W/2-ED, BZPOS-T]);
-              translate([BW/2-2,W/2+ED,T]) cube([2+(R-T),BL-W/2-ED, BZPOS-T]);
+              translate([-BW/2-(R-T), W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T - 0.5]);
+              translate([BW/2-2, W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T - 0.5]);
             }
           }
           // Display support
-          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 2]);
+          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 1.5]);
         }
         // Screw holes
-        translate([BW/2-13-6/2,BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90,0,0]) ScrewHoleUp(15);
-        translate([-BW/2+13+6/2,BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90,0,0]) ScrewHoleUp(15);
+        translate([BW/2-13-6/2, BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90, 0, 0]) ScrewHoleUp(15);
+        translate([-BW/2+13+6/2, BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90, 0, 0]) ScrewHoleUp(15);
         translate([-W/2-R+0.4, 55.8, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0, 90, 0]) ScrewHoleUp(15);
-        translate([W/2+R-0.4, 55.8, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0,-90,0]) ScrewHoleUp(15);
+        translate([W/2+R-0.4, 55.8, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0, -90, 0]) ScrewHoleUp(15);
         // Encoder hole
         translate([0, ENC_OFFSET, -1]) cylinder(d=W+ENC_T, h=H);
         // Display
