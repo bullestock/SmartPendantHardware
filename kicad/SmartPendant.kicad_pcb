@@ -1088,6 +1088,9 @@
 			(at -3.1 1.85 180)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
@@ -1117,6 +1120,9 @@
 			(at 3.1 1.85 180)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
@@ -4848,6 +4854,9 @@
 			(at -3.1 1.85)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
@@ -4877,6 +4886,9 @@
 			(at 3.1 1.85)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
@@ -9377,6 +9389,9 @@
 			(at -3.1 1.85)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
@@ -9406,6 +9421,9 @@
 			(at 3.1 1.85)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
@@ -11547,6 +11565,9 @@
 			(at -3.1 1.85 90)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
@@ -11576,6 +11597,9 @@
 			(at 3.1 1.85 90)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
@@ -15616,6 +15640,9 @@
 			(at -3.1 1.85 180)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
@@ -15645,6 +15672,9 @@
 			(at 3.1 1.85 180)
 			(size 0.7675 0.7675)
 			(layers "F.Cu" "F.Mask" "F.Paste")
+			(net 1 "GND")
+			(pinfunction "B")
+			(pintype "passive")
 			(options
 				(clearance outline)
 				(anchor circle)
