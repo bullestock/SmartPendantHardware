@@ -187,14 +187,10 @@ module Top()
           translate([18, W/2+ED/2 - 4, 0]) cube([2*ED, ED, BZPOS]);
           //translate([-BW/2-(R-T), W/2+ED-1.2, T]) cube([W+(R-T)*2, 1.2, BZPOS-T-0.6]);
           // PCB side support
-          difference()
-          {
-            union()
-            {
-              translate([-BW/2-(R-T), W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T]);
-              translate([BW/2-2, W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T]);
-            }
-          }
+          translate([-BW/2-(R-T), W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T]);
+          translate([BW/2-2, W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T]);
+          translate([-BW/2-(R-T), 2*W, T]) cube([2+(R-T), 5, H-T-11]);
+          translate([BW/2-2, 2*W, T]) cube([2+(R-T), 5, H-T-11]);
           // Display support
           translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 2]);
         }
