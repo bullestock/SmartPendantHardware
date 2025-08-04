@@ -143,11 +143,14 @@ module ButtonHole(DFG, D)
         
         hull()
         {
+            // slanted corners
             translate([X1, Y1, -0.1]) cylinder(d=D, h=T+0.2);
-            translate([X2, Y2,-0.1]) cylinder(d=D, h=T+0.2);
+            translate([X2, Y2, -0.1]) cylinder(d=D, h=T+0.2);
+            // top right angle corner
             translate([SW/2-D/2, Y1, -0.1]) cylinder(d=D, h=T+0.2);
-            translate([SW/2-D/2, W/2+BUTTON_LEN-DFG-D/2, -0.1]) cylinder(d=D, h=T+0.2);
-            translate([X2, W/2+BUTTON_LEN-DFG-D/2, -0.1]) cylinder(d=D, h=T+0.2);
+            // bottom corners
+            translate([SW/2-D/2, W/2+BUTTON_LEN-DFG-D/2 + 0.8, -0.1]) cylinder(d=D, h=T+0.2);
+            translate([X2, W/2+BUTTON_LEN-DFG-D/2 + 0.8, -0.1]) cylinder(d=D, h=T+0.2);
         }
         translate([0,0,-0.2]) cylinder(d=W+H*2, h=T+0.4);
     }
