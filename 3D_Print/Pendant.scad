@@ -12,7 +12,7 @@ T = 2.4; // Case thickness
 R = 2.6; // Case radius
 W = 60; // Width(encoder & board)
 L = 156+R*2; // Length(full length + two radiuses)
-H = 16;
+H = 20;
 
 // Encoder tolerance
 ENC_T = 0.4;
@@ -26,7 +26,7 @@ BUTTON_OFFSET = -3;
 
 BW = 60; // Board Width
 BL = 126; // Board Length(from center of encoder to top edge)
-BT = 1.6; // Board thickness
+BT = 1.6 + 2; // Board thickness
 BZPOS = 4.4; // Board Z position if placed on table display face down
 
 SW = 55.5; // Screen width
@@ -181,20 +181,20 @@ module Top()
             translate([0, 0, T]) Case(W+R*2-T*2, L - T*2 - ENC_OFFSET, H, R-T);
           }
           // Central support (between encoder and display hole)
-          translate([-18-2*ED, W/2+ED/2 - 4, 0]) cube([2*ED, ED, BZPOS - 0.1]);
-          translate([18, W/2+ED/2 - 4, 0]) cube([2*ED, ED, BZPOS - 0.1]);
+          translate([-18-2*ED, W/2+ED/2 - 4, 0]) cube([2*ED, ED, BZPOS]);
+          translate([18, W/2+ED/2 - 4, 0]) cube([2*ED, ED, BZPOS]);
           //translate([-BW/2-(R-T), W/2+ED-1.2, T]) cube([W+(R-T)*2, 1.2, BZPOS-T-0.6]);
           // PCB side support
           difference()
           {
             union()
             {
-              translate([-BW/2-(R-T), W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T - 0.5]);
-              translate([BW/2-2, W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T - 0.5]);
+              translate([-BW/2-(R-T), W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T]);
+              translate([BW/2-2, W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T]);
             }
           }
           // Display support
-          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 1.5]);
+          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 2]);
         }
         // Screw holes
         translate([BW/2-13-6/2, BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90, 0, 0]) ScrewHoleUp(15);
@@ -235,7 +235,7 @@ module Top()
           //translate([W/2-9,106.3-4.8/2, BZPOS+BT+1.2+6.4]) cube([15,4.8,0.6]);
         }
         // USB-C 
-        translate([2.9, BL, BZPOS+BT+6])
+        translate([0, BL, BZPOS+BT+6])
         {
           // Connector hole
           translate([0,-1,0]) rotate([-90,0,0]) hull()
@@ -276,8 +276,8 @@ module Top()
         translate([-80/2, 10, BZPOS]) cube([80, 40, H]);
       }
     }
-    // Screw hole
-    translate([0, -50.5/2 + ENC_OFFSET, 0]) cylinder(d=3.2, h=H);
+    // Encoder screw hole
+    translate([0, -50.5/2 + ENC_OFFSET, 0]) cylinder(d=3.5, h=H);
     // Right button hole
     translate([0, -5, 0]) ButtonHole(2.8, 3);
     // Left button hole
