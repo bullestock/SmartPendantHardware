@@ -17779,7 +17779,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Buzzer_Beeper:MagneticBuzzer_PUI_AT-0927-TT-6-R"
 			(at 74.295 129.54 90)
 			(effects
 				(font

@@ -3325,6 +3325,167 @@
 			)
 		)
 	)
+	(footprint "Buzzer_Beeper:MagneticBuzzer_PUI_AT-0927-TT-6-R"
+		(layer "F.Cu")
+		(uuid "3762ac70-ede9-4a0c-bdc3-760f1598c487")
+		(at 189.7766 95.0722)
+		(descr "Buzzer Magnetic 9mm AT-0927-TT-6-R, http://www.puiaudio.com/pdf/AT-0927-TT-6-R.pdf")
+		(tags "Buzzer Magnetic 9mm AT-0927-TT-6-R")
+		(property "Reference" "BZ1"
+			(at 2 5.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e631a0fd-f085-4ca0-97d1-e7f2bac5470c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Buzzer"
+			(at 2 7 0)
+			(layer "F.Fab")
+			(uuid "2dc6328b-132a-4b23-85d9-699e58b2748e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "99331614-042b-461f-b40a-ae5c394f98c9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Buzzer, polarized"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "88f53787-9317-44d4-8f24-c62c9252252e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "*Buzzer*")
+		(path "/e7cb8176-4c6d-4be0-8215-62f43ce13a0a")
+		(sheetname "/")
+		(sheetfile "SmartPendant.kicad_sch")
+		(attr through_hole)
+		(fp_circle
+			(center 2 0)
+			(end 6.62 0)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "74d820e4-dd87-4758-92eb-29b567bca70e")
+		)
+		(fp_circle
+			(center 2 0)
+			(end 6.75 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "5ea66147-ed4a-4013-b190-8e6e162b984b")
+		)
+		(fp_circle
+			(center 2 0)
+			(end 6.5 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "db7d18b0-7f09-4fd9-b7bb-52fc79602e38")
+		)
+		(fp_text user "+"
+			(at -1.5 -0.1 0)
+			(layer "F.SilkS")
+			(uuid "dac7c433-c15b-416c-92bc-1d591bbdb8e1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "${REFERENCE}"
+			(at 2 2 0)
+			(layer "F.Fab")
+			(uuid "3328f2e5-f0ed-49eb-a9b3-ec1ca8de76db")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "+"
+			(at -1.5 -0.1 0)
+			(layer "F.Fab")
+			(uuid "c6f8778c-78af-4b22-af8d-afd13f9818f8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 1.6 1.6)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 11 "+3.3V")
+			(pinfunction "+")
+			(pintype "passive")
+			(uuid "3d4ce780-fff2-41b3-ab91-2bcd0355a943")
+		)
+		(pad "2" thru_hole circle
+			(at 4 0)
+			(size 1.6 1.6)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 15 "Net-(BZ1--)")
+			(pinfunction "-")
+			(pintype "passive")
+			(uuid "c4592be7-df4f-4c09-a059-2ade4a9d50fe")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Buzzer_Beeper.3dshapes/MagneticBuzzer_PUI_AT-0927-TT-6-R.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Custom:JST_XH_S5B-XH-A_1x05_P2.50mm_Horizontal_Compact"
 		(layer "F.Cu")
 		(uuid "3e466d5c-d71b-4b60-bd0e-9c499c683791")
@@ -4028,7 +4189,7 @@
 	(footprint "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "46b8d7b9-18a0-4780-9574-4100fabb14fe")
-		(at 192.3158 93.114196)
+		(at 171.2338 90.678)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), Alternate KiCad Library")
 		(tags "capacitor")
 		(property "Reference" "C1"
@@ -6400,7 +6561,7 @@
 	(footprint "PCM_Capacitor_SMD_AKL:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "697bccaa-d0f7-4286-b742-c461275470cc")
-		(at 192.3158 95.8342)
+		(at 177.1774 90.7542)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), Alternate KiCad Library")
 		(tags "capacitor")
 		(property "Reference" "C2"
