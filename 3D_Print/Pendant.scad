@@ -257,11 +257,8 @@ module Top()
       // Encoder
       difference()
       {
-        union()
-        {
-          //translate([0, ENC_OFFSET, T]) cylinder(d=W+R*2, h=BZPOS);
-          translate([-(W+R*2-T*2)/2, 0, T]) cube([W+R*2-T*2, W/2, BZPOS]);
-        }
+        // PCB support
+        translate([-(W+R*2-T*2)/2, 0, T]) cube([W+R*2-T*2, W/2, H-T-11]);
         // Cutout for encoder rim
         translate([0, ENC_OFFSET, 0]) cylinder(d=W+ENC_T, h=BZPOS);
         // Cutout for encoder terminals
@@ -269,11 +266,11 @@ module Top()
         // Board holder near encoder
         difference()
         {
-          translate([0,0,0]) cylinder(d=W+ENC_T, h=H);
-          translate([-80/2,-40,-1]) cube([80,40,H+T*2+1]);
+          translate([0, 0, 0]) cylinder(d=W+ENC_T, h=H);
+          translate([-80/2, -40, -1]) cube([80, 40, H+T*2+1]);
         }
-        translate([-80/2, 18, -5]) cube([80,40,H+T*2+1]);
-        translate([-80/2, 10, BZPOS]) cube([80, 40, H]);
+        // Cutout for front buttons
+        translate([-80/2, 18, -5]) cube([80, 40, H+T*2+1]);
       }
     }
     // Encoder screw hole
