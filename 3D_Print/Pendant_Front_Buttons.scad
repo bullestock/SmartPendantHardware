@@ -1,11 +1,10 @@
 $fn = 300;
 
-//mirror([1,0,0])
-
 // First parameter - corner radius. It can be less than original one for clearence.
 // Second parameter - Radius for lock, it may be greater than original
 // Third parameter - length reduction(added to clearence gained by smaller first parameter)
-FrontButton(2.5, 3.6, 0.3);
+translate([-15, 0, 0]) FrontButton(2.5, 3.6, 0.3);
+mirror([1, 0, 0]) translate([-15, 0, 0]) FrontButton(2.5, 3.6, 0.3);
 
 //Jig(2.5, 3.6, 0.3, 30);
 
@@ -27,6 +26,7 @@ module FrontButton(DB, DL, LR)
   
   H = 3;
   R = W/2+H+D/2;
+  BH = 5;
 
   Y1 = (W/2+ED-DFG) - ((W/2+ED-DFG)-28.3)*2 + D/2; // Find symmetrical bottom distance
   X1 = sqrt(abs(Y1*Y1 - R*R));
@@ -37,25 +37,23 @@ module FrontButton(DB, DL, LR)
   {
     hull()
     {
-      translate([X1,Y1,-0.1]) cylinder(d=DB, h=3);
-      translate([X2,Y2,-0.1]) cylinder(d=DB, h=3);
-      translate([SW/2-D/2 - LR,Y1,-0.1]) cylinder(d=DB, h=3);
-      translate([SW/2-D/2 - LR,W/2+ED-DFG-D/2,-0.1]) cylinder(d=DB, h=3);
-      translate([X2,W/2+ED-DFG-D/2,-0.1]) cylinder(d=DB, h=3);
+      translate([X1-0.8, Y1, -0.1]) cylinder(d=DB, h=BH);
+      translate([X2, Y2-0.5, -0.1]) cylinder(d=DB, h=BH);
+      translate([SW/2-D/2 - LR + 0.5, Y1, -0.1]) cylinder(d=DB, h=BH);
+      translate([SW/2-D/2 - LR + 0.5, W/2+ED-DFG-D/2,-0.1]) cylinder(d=DB, h=BH);
+      translate([X2,W/2+ED-DFG-D/2,-0.1]) cylinder(d=DB, h=BH);
     }
-    translate([0,0,-0.2]) cylinder(d=W+H*2+(D-DB), h=3+0.4);
   }
   difference()
   {
     hull()
     {
-      translate([X1,Y1,-0.1]) cylinder(d=DL, h=0.4);
-      translate([X2,Y2,-0.1]) cylinder(d=DL, h=0.4);
-      translate([SW/2-D/2 - LR,Y1,-0.1]) cylinder(d=DL, h=0.4);
-      translate([SW/2-D/2 - LR,W/2+ED-DFG-D/2,-0.1]) cylinder(d=DL, h=0.4);
+      translate([X1 - 1, Y1, -0.1]) cylinder(d=DL, h=0.4);
+      translate([X2, Y2 - 0.5, -0.1]) cylinder(d=DL, h=0.4);
+      translate([SW/2-D/2 - LR + 0.5,Y1,-0.1]) cylinder(d=DL, h=0.4);
+      translate([SW/2-D/2 - LR + 0.5, W/2+ED-DFG-D/2,-0.1]) cylinder(d=DL, h=0.4);
       translate([X2,W/2+ED-DFG-D/2,-0.1]) cylinder(d=DL, h=0.4);
     }
-    translate([0,0,-0.2]) cylinder(d=W+H*2-(DL-D), h=3+0.4);
   }
 }
 
