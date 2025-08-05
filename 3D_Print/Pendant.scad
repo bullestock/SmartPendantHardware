@@ -1,5 +1,5 @@
-$fn=300;
-//$fn=60; // draft
+//$fn=600;
+$fn=60; // draft
 
 //import("OBJ_PCB_Smart_Pendant.stl");
 
@@ -363,12 +363,12 @@ module Bottom()
   // Top locks
   difference()
   {
-    translate([BW/2-6-13,BL-3.5,0]) cube([6, 3.5+(R-T), BOTTOM_H+H-BZPOS-BT]);
+    translate([BW/2-6-13,BL-3.5,0]) cube([6, 3.5+(R-T), BOTTOM_H + 11 - 1.25]);
     translate([BW/2-6-13+6/2, 0, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
   }
   difference()
   {
-    translate([-BW/2+16, BL-3.5, 0]) cube([6, 3.5+(R-T), BOTTOM_H+H-BZPOS-BT]);
+    translate([-BW/2+16, BL-3.5, 0]) cube([6, 3.5+(R-T), BOTTOM_H + 11 - 1.25]);
     translate([-BW/2+16+6/2, 0, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
   }
   // Middle locks
@@ -376,17 +376,15 @@ module Bottom()
   {
     union()
     {
-      translate([-BW/2,55.8-6/2,0]) cube([3.5,6,BOTTOM_H+H-BZPOS-BT]);
+      translate([-BW/2,55.8-6/2,0]) cube([3.5,6,BOTTOM_H + 11 - 1.25]);
       difference()
       {
-        translate([BW/2-3.5, 55.8-6/2, 0]) cube([3.5, 6, BOTTOM_H+H-BZPOS-BT]);
-        translate([BW/2-3.5-2, 55.8-7/2, BOTTOM_H+H-BZPOS-BT-2]) cube([3.5, 7, BOTTOM_H+H-BZPOS-BT]);
+        translate([BW/2-3.5, 55.8-6/2, 0]) cube([3.5, 6, BOTTOM_H + 11 - 1.25]);
+        //translate([BW/2-3.5-2, 55.8-7/2, BOTTOM_H+H-BZPOS-BT-2]) cube([3.5, 7, BOTTOM_H+H-BZPOS-BT]);
       }
     }
     translate([-100, 55.8, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([0, 90, 0]) cylinder(d=2.6, h=200);
   }
-  // PCB spacer
-  translate([BW/2 - 3.5, BL - 6, 0]) cube([3.5, 6, BOTTOM_H + 11 - 1.65]);
 }
 
 // *******************************************************************
