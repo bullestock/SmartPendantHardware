@@ -1,5 +1,5 @@
-//$fn=300;
-$fn=60; // draft
+$fn=300;
+//$fn=60; // draft
 
 //import("OBJ_PCB_Smart_Pendant.stl");
 
@@ -48,10 +48,10 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-Top();
+//Top();
 //Bottom();
 //translate([75,0,0]) Bottom();
-//translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
+translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 
 //Board();
 
@@ -310,14 +310,15 @@ module Bottom()
     // Debug port cutout(connector only)
     translate([-W/2-T-1,106.3-22/2,BOTTOM_H]) cube([15,22,8.4]);
     // Button holes
-    translate([0,77,-1]) 
+    translate([0, 90.5, -1]) 
     {
-      translate([+2.325,-15,0]) cylinder(d=3, h=10);
-      translate([-2.325,-15,0]) cylinder(d=3, h=10);
+      // RESET/BOOT
+      translate([+2.325, -15,0]) cylinder(d=3, h=10);
+      translate([-2.325, -15,0]) cylinder(d=3, h=10);
       //translate([+2.325,-40.7,0]) cylinder(d=3, h=10);
       // LEDs
-      translate([+5,-41.7,0]) cylinder(d=1.5, h=10);
-      translate([-5,-41.7,0]) cylinder(d=1.5, h=10);
+      //translate([+5,-41.7,0]) cylinder(d=1.5, h=10);
+      //translate([-5,-41.7,0]) cylinder(d=1.5, h=10);
     }
     // Recess for encoder
     translate([0,0,1.2]) hull()
@@ -378,12 +379,14 @@ module Bottom()
       translate([-BW/2,55.8-6/2,0]) cube([3.5,6,BOTTOM_H+H-BZPOS-BT]);
       difference()
       {
-        translate([BW/2-3.5,55.8-6/2,0]) cube([3.5,6,BOTTOM_H+H-BZPOS-BT]);
-        translate([BW/2-3.5-2,55.8-7/2,BOTTOM_H+H-BZPOS-BT-2]) cube([3.5,7,BOTTOM_H+H-BZPOS-BT]);
+        translate([BW/2-3.5, 55.8-6/2, 0]) cube([3.5, 6, BOTTOM_H+H-BZPOS-BT]);
+        translate([BW/2-3.5-2, 55.8-7/2, BOTTOM_H+H-BZPOS-BT-2]) cube([3.5, 7, BOTTOM_H+H-BZPOS-BT]);
       }
     }
     translate([-100, 55.8, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([0, 90, 0]) cylinder(d=2.6, h=200);
   }
+  // PCB spacer
+  translate([BW/2 - 3.5, BL - 6, 0]) cube([3.5, 6, BOTTOM_H + 11 - 1.65]);
 }
 
 // *******************************************************************
