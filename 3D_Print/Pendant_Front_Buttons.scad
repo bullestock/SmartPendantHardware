@@ -32,7 +32,7 @@ module FrontButton(DB, DL, LR)
   X2 = SW/2 - (SW/2-23.4)*2;// + D/2;
   Y2 = sqrt(abs(X2*X2 - R*R));
 
-  skirt_h = 3.8+1.5;
+  skirt_h = 4.5 - 2.4;
   BH = skirt_h + 4.6;
   difference()
   {
@@ -40,8 +40,8 @@ module FrontButton(DB, DL, LR)
     {
       translate([X1-0.8, Y1, -0.1]) cylinder(d=DB, h=BH);
       translate([X2, Y2-0.5, -0.1]) cylinder(d=DB, h=BH);
-      translate([SW/2-D/2 - LR + 0.4, Y1, -0.1]) cylinder(d=DB, h=BH);
-      translate([SW/2-D/2 - LR + 0.4, W/2+ED-DFG-D/2,-0.1]) cylinder(d=DB, h=BH);
+      translate([SW/2-D/2 - LR + 0.3, Y1, -0.1]) cylinder(d=DB, h=BH);
+      translate([SW/2-D/2 - LR + 0.3, W/2+ED-DFG-D/2,-0.1]) cylinder(d=DB, h=BH);
       translate([X2, W/2+ED-DFG-D/2, -0.1]) cylinder(d=DB, h=BH);
     }
   }
