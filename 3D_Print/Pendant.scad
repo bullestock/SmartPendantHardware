@@ -1,5 +1,5 @@
 //$fn=600;
-$fn=60; // draft
+//$fn=500;
 
 //import("OBJ_PCB_Smart_Pendant.stl");
 
@@ -21,7 +21,7 @@ ENC_T = 0.4;
 ENC_RT = 6;
 
 ENC_OFFSET = -5;
-STANDOFF_C = 6;
+STANDOFF_C = 6+5.6-1.1;
 BUTTON_OFFSET = -3;
 
 BW = 60; // Board Width
@@ -304,7 +304,7 @@ module Bottom()
         }
         translate([0, 2.5, T])  Case(W+R*2-T*3, L-T*3, BOTTOM_H+T, R-T);
         // Gland cutout
-        translate([17, L-W/2-13.2, T+1.6]) cube([12, 6, 5]);
+        translate([17.1, L-W/2-7.0, T]) cube([13, 2, 5]);
       }
     }
     // Debug port cutout(connector only)
@@ -327,7 +327,7 @@ module Bottom()
       translate([-(44-5)/2,W/2,0]) cylinder(d=5, h=10);
       translate([+(44-5)/2,W/2,0]) cylinder(d=5, h=10);
     }
-    // Recess
+    // Top recess
     translate([0,0,1.2]) hull()
     {
       translate([-(44-5)/2,70,0]) cylinder(d=5, h=10);
