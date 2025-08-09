@@ -1,4 +1,4 @@
-$fn = 300;
+$fn = 600;
 
 // First parameter - corner radius. It can be less than original one for clearence.
 // Second parameter - Radius for lock, it may be greater than original
@@ -26,33 +26,34 @@ module FrontButton(DB, DL, LR)
   
   H = 3;
   R = W/2+H+D/2;
-  BH = 5;
 
   Y1 = (W/2+ED-DFG) - ((W/2+ED-DFG)-28.3)*2 + D/2; // Find symmetrical bottom distance
   X1 = sqrt(abs(Y1*Y1 - R*R));
   X2 = SW/2 - (SW/2-23.4)*2;// + D/2;
   Y2 = sqrt(abs(X2*X2 - R*R));
 
+  skirt_h = 3.8+1.5;
+  BH = skirt_h + 4.6;
   difference()
   {
     hull()
     {
       translate([X1-0.8, Y1, -0.1]) cylinder(d=DB, h=BH);
       translate([X2, Y2-0.5, -0.1]) cylinder(d=DB, h=BH);
-      translate([SW/2-D/2 - LR + 0.5, Y1, -0.1]) cylinder(d=DB, h=BH);
-      translate([SW/2-D/2 - LR + 0.5, W/2+ED-DFG-D/2,-0.1]) cylinder(d=DB, h=BH);
-      translate([X2,W/2+ED-DFG-D/2,-0.1]) cylinder(d=DB, h=BH);
+      translate([SW/2-D/2 - LR + 0.4, Y1, -0.1]) cylinder(d=DB, h=BH);
+      translate([SW/2-D/2 - LR + 0.4, W/2+ED-DFG-D/2,-0.1]) cylinder(d=DB, h=BH);
+      translate([X2, W/2+ED-DFG-D/2, -0.1]) cylinder(d=DB, h=BH);
     }
   }
   difference()
   {
     hull()
     {
-      translate([X1 - 1, Y1, -0.1]) cylinder(d=DL, h=0.4);
-      translate([X2, Y2 - 0.5, -0.1]) cylinder(d=DL, h=0.4);
-      translate([SW/2-D/2 - LR + 0.5,Y1,-0.1]) cylinder(d=DL, h=0.4);
-      translate([SW/2-D/2 - LR + 0.5, W/2+ED-DFG-D/2,-0.1]) cylinder(d=DL, h=0.4);
-      translate([X2,W/2+ED-DFG-D/2,-0.1]) cylinder(d=DL, h=0.4);
+      translate([X1 - 1, Y1, -0.1]) cylinder(d=DL, h=skirt_h);
+      translate([X2, Y2 - 0.5, -0.1]) cylinder(d=DL, h=skirt_h);
+      translate([SW/2-D/2 - LR + 0.5,Y1,-0.1]) cylinder(d=DL, h=skirt_h);
+      translate([SW/2-D/2 - LR + 0.5, W/2+ED-DFG-D/2,-0.1]) cylinder(d=DL, h=skirt_h);
+      translate([X2,W/2+ED-DFG-D/2,-0.1]) cylinder(d=DL, h=skirt_h);
     }
   }
 }
