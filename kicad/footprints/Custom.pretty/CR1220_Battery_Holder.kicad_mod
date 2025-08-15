@@ -51,8 +51,8 @@
 	)
 	(attr through_hole)
 	(fp_line
-		(start -8.382 7.493)
-		(end -8.382 4.7625)
+		(start -7.5 7.493)
+		(end -7.5 4.7625)
 		(stroke
 			(width 0.15)
 			(type solid)
@@ -62,7 +62,7 @@
 	)
 	(fp_line
 		(start -1.5875 7.493)
-		(end -8.382 7.493)
+		(end -7.5 7.493)
 		(stroke
 			(width 0.15)
 			(type solid)
@@ -72,7 +72,7 @@
 	)
 	(fp_line
 		(start 1.7145 7.493)
-		(end 8.4455 7.493)
+		(end 7.5 7.493)
 		(stroke
 			(width 0.15)
 			(type solid)
@@ -81,8 +81,8 @@
 		(uuid "6ef2b8b4-b112-4033-aa65-befb4955396f")
 	)
 	(fp_line
-		(start 8.4455 7.493)
-		(end 8.4455 4.8895)
+		(start 7.5 7.493)
+		(end 7.5 4.8895)
 		(stroke
 			(width 0.15)
 			(type solid)
@@ -112,15 +112,31 @@
 		(layer "F.SilkS")
 		(uuid "6d556bd4-69f8-49f9-a3c3-b16d023bc23a")
 	)
+	(pad "" np_thru_hole circle
+		(at 0 -3.75)
+		(size 0.7 0.7)
+		(drill 0.7)
+		(layers "F&B.Cu" "*.Mask")
+		(thermal_bridge_angle 90)
+		(uuid "2a5a9eb3-868c-4cfb-b0ef-ef4713f6b474")
+	)
+	(pad "" np_thru_hole circle
+		(at 0 3.75)
+		(size 0.9 0.9)
+		(drill 0.9)
+		(layers "F&B.Cu" "*.Mask")
+		(thermal_bridge_angle 90)
+		(uuid "6e19f12b-a05d-43ea-b79c-0e48e64527a2")
+	)
 	(pad "1" smd rect
-		(at 0.0635 7.4295)
-		(size 3 5)
+		(at 0.0635 7.92)
+		(size 2 4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "47c0ae70-4b10-4e92-bf3c-23af5357ae56")
 	)
 	(pad "2" smd rect
-		(at 0.0635 -7.62)
-		(size 3 5)
+		(at 0.0635 -7.92)
+		(size 2 4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "90fe7f5f-3a12-44fe-9be0-2378f7761412")
 	)

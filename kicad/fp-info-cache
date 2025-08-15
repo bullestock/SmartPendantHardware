@@ -1,4 +1,4 @@
-22515386011249689
+22517141649003340
 Battery
 BatteryClip_Keystone_54_D16-19mm
 Battery clip for batteries with a diameter between 16-19 mm: https://www.keyelco.com/product.cfm/product_id/826
@@ -9365,6 +9365,13 @@ stm32 arm
 0
 44
 44
+Custom
+Buzzer_4.7x9.4mm
+Buzzer Magnetic 9mm AT-0927-TT-6-R, http://www.puiaudio.com/pdf/AT-0927-TT-6-R.pdf
+Buzzer Magnetic 9mm AT-0927-TT-6-R
+0
+2
+2
 Custom
 CR1220_Battery_Holder
 

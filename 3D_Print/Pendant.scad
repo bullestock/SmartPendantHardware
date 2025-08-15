@@ -21,7 +21,7 @@ ENC_T = 0.4;
 ENC_RT = 6;
 
 ENC_OFFSET = -5;
-STANDOFF_C = 6+5.6-1.1;
+STANDOFF_C = 6+5.6-1.1; // TODO: fix
 BUTTON_OFFSET = -3;
 
 BW = 60; // Board Width
@@ -48,10 +48,10 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-Top();
+//Top();
 //Bottom();
 //translate([75,0,0]) Bottom();
-//translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
+translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 
 //Board();
 
@@ -288,6 +288,7 @@ module Top()
 // *******************************************************************
 // ***   Bottom module   *********************************************
 // *******************************************************************
+
 module Bottom()
 {
   difference()
@@ -305,6 +306,8 @@ module Bottom()
         translate([0, 2.5, T])  Case(W+R*2-T*3, L-T*3, BOTTOM_H+T, R-T);
         // Gland cutout
         translate([17.1, L-W/2-7.0, T]) cube([13, 2, 5]);
+        // Make room for cable
+        translate([18, L-W/2-9.5, T]) cube([10, 3, 5]);
       }
     }
     // Debug port cutout(connector only)
@@ -337,7 +340,7 @@ module Bottom()
     }
     // Nut hole
     //translate([0,-50.5/2,-1]) cylinder(d=3.2, h=100);
-    translate([0, -50.5/2 + ENC_OFFSET, -1]) cylinder(d=8, h=BZPOS+6+1);
+    translate([0, -50.5/2 + ENC_OFFSET, -1]) cylinder(d=8, h=BZPOS+6+1); // TODO: fix height
     //translate([0,-50.5/2,0]) cylinder(d=7.7, h=H);
   }
   // Debug port cutout(connector only)
@@ -351,7 +354,6 @@ module Bottom()
     // Screw hole
     translate([0, -50.5/2 + ENC_OFFSET, 0]) cylinder(d=3.2, h=100);
     // Cut off part of top
-    translate([0, ENC_OFFSET, BOTTOM_H+H-(BZPOS+6)-1 - STANDOFF_C]) cylinder(d=43, h=H - STANDOFF_C);
     translate([0, -50.5/2 + ENC_OFFSET, -1]) cylinder(d=8, h=BOTTOM_H+H-(BZPOS+6)+1+1 - STANDOFF_C);
     // Cut off bottom
     difference()
@@ -383,6 +385,7 @@ module Bottom()
         //translate([BW/2-3.5-2, 55.8-7/2, BOTTOM_H+H-BZPOS-BT-2]) cube([3.5, 7, BOTTOM_H+H-BZPOS-BT]);
       }
     }
+    // Screw hole
     translate([-100, 55.8, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([0, 90, 0]) cylinder(d=2.6, h=200);
   }
 }

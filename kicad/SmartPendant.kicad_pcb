@@ -809,7 +809,7 @@
 	(footprint "Custom:SMD_Push_Side_button_3x6x3.5mm"
 		(layer "F.Cu")
 		(uuid "12db128b-a0c3-4d00-865e-3dc961f6fc74")
-		(at 197.9 50.1 180)
+		(at 197.9 52.1 180)
 		(descr "Microminiature SMT Side Actuated, 4.2 x 2.8 x 1.42mm with pegs, https://www.ckswitches.com/media/1482/kms.pdf")
 		(tags "Switch SPST KMS2")
 		(property "Reference" "BTN_LD1"
@@ -1164,7 +1164,7 @@
 	(footprint "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "1cece41f-be88-4e23-a633-83e82472cb79")
-		(at 239.6998 76.75 180)
+		(at 239.6876 76.0222 180)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), Alternate KiCad Library")
 		(tags "resistor")
 		(property "Reference" "R4"
@@ -2859,14 +2859,14 @@
 	(footprint "Custom:USB_C_Receptacle_AliExpress_16pin"
 		(layer "F.Cu")
 		(uuid "3623f481-9706-4f8d-8a7e-0b56608f6ffb")
-		(at 246.1166 78.5 90)
+		(at 246.1166 77.75 90)
 		(descr "USB Type C, right-angle, SMT, https://datasheet.lcsc.com/szlcsc/1811141824_XKB-Enterprise-U262-161N-4BVC11_C319148.pdf")
 		(tags "USB C Type-C Receptacle SMD")
 		(property "Reference" "J6"
 			(at 0 -5.715 90)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "509dcee5-700f-43ff-850e-12f210d9982a")
+			(uuid "73ce1d0f-9419-4483-976e-b722a0b487b6")
 			(effects
 				(font
 					(size 1 1)
@@ -2878,7 +2878,7 @@
 			(at 0 4.935 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "59801c5f-6716-4b28-b051-fbae4d2b3d0b")
+			(uuid "7491bad6-ff2a-4d41-9811-b008261f2c8c")
 			(effects
 				(font
 					(size 1 1)
@@ -2891,7 +2891,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d019cc9c-2678-413c-84a4-5cb851e01c3a")
+			(uuid "7020957e-f7bb-4d98-b2bf-2b372a611785")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2904,7 +2904,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1fa708b7-0533-4324-8b7e-4a73cd6e0308")
+			(uuid "153d8fcb-116a-49cc-a920-10f7fc1ce372")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3325,14 +3325,14 @@
 			)
 		)
 	)
-	(footprint "Buzzer_Beeper:MagneticBuzzer_PUI_AT-0927-TT-6-R"
+	(footprint "Custom:Buzzer_4.7x9.4mm"
 		(layer "F.Cu")
 		(uuid "3762ac70-ede9-4a0c-bdc3-760f1598c487")
-		(at 189.7766 95.0722)
+		(at 186.8678 94.9452 -90)
 		(descr "Buzzer Magnetic 9mm AT-0927-TT-6-R, http://www.puiaudio.com/pdf/AT-0927-TT-6-R.pdf")
 		(tags "Buzzer Magnetic 9mm AT-0927-TT-6-R")
 		(property "Reference" "BZ1"
-			(at 2 5.5 0)
+			(at 2 5.5 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "e631a0fd-f085-4ca0-97d1-e7f2bac5470c")
@@ -3344,8 +3344,9 @@
 			)
 		)
 		(property "Value" "Buzzer"
-			(at 2 7 0)
+			(at 2 7 90)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "2dc6328b-132a-4b23-85d9-699e58b2748e")
 			(effects
 				(font
@@ -3355,7 +3356,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 0 0 0)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -3368,7 +3369,7 @@
 			)
 		)
 		(property "Description" "Buzzer, polarized"
-			(at 0 0 0)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -3386,40 +3387,40 @@
 		(sheetfile "SmartPendant.kicad_sch")
 		(attr through_hole)
 		(fp_circle
-			(center 2 0)
-			(end 6.62 0)
+			(center 2.54 0)
+			(end 7.24 0)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(fill no)
 			(layer "F.SilkS")
-			(uuid "74d820e4-dd87-4758-92eb-29b567bca70e")
+			(uuid "a416225c-21ac-4af6-b4eb-217fe9041dd4")
 		)
 		(fp_circle
-			(center 2 0)
-			(end 6.75 0)
+			(center 2.54 0)
+			(end 7.34 0)
 			(stroke
 				(width 0.05)
 				(type solid)
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "5ea66147-ed4a-4013-b190-8e6e162b984b")
+			(uuid "eeb978ba-30d0-43e4-afdc-f387012f4533")
 		)
 		(fp_circle
-			(center 2 0)
-			(end 6.5 0)
+			(center 2.54 0)
+			(end 7.14 0)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "db7d18b0-7f09-4fd9-b7bb-52fc79602e38")
+			(uuid "1b77c0fd-c2ff-428f-83b8-b0551d7043dc")
 		)
 		(fp_text user "+"
-			(at -1.5 -0.1 0)
+			(at -1.5 -0.1 90)
 			(layer "F.SilkS")
 			(uuid "dac7c433-c15b-416c-92bc-1d591bbdb8e1")
 			(effects
@@ -3430,7 +3431,7 @@
 			)
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2 2 0)
+			(at 2 2 90)
 			(layer "F.Fab")
 			(uuid "3328f2e5-f0ed-49eb-a9b3-ec1ca8de76db")
 			(effects
@@ -3441,7 +3442,7 @@
 			)
 		)
 		(fp_text user "+"
-			(at -1.5 -0.1 0)
+			(at -1.5 -0.1 90)
 			(layer "F.Fab")
 			(uuid "c6f8778c-78af-4b22-af8d-afd13f9818f8")
 			(effects
@@ -3452,7 +3453,7 @@
 			)
 		)
 		(pad "1" thru_hole rect
-			(at 0 0)
+			(at 0 0 270)
 			(size 1.6 1.6)
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
@@ -3463,7 +3464,7 @@
 			(uuid "3d4ce780-fff2-41b3-ab91-2bcd0355a943")
 		)
 		(pad "2" thru_hole circle
-			(at 4 0)
+			(at 5.06 0 270)
 			(size 1.6 1.6)
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
@@ -4464,7 +4465,7 @@
 	(footprint "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "492bfcd5-d9b3-4af9-af61-d9de98dffc84")
-		(at 196.6214 53.4924 180)
+		(at 196.6214 55.5 180)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), Alternate KiCad Library")
 		(tags "resistor")
 		(property "Reference" "R11"
@@ -4736,7 +4737,7 @@
 	(footprint "Custom:SMD_Push_Side_button_3x6x3.5mm"
 		(layer "F.Cu")
 		(uuid "5124adce-8bac-4544-8204-92ecd3483abe")
-		(at 197.9 104.9)
+		(at 197.9 102.9)
 		(descr "Microminiature SMT Side Actuated, 4.2 x 2.8 x 1.42mm with pegs, https://www.ckswitches.com/media/1482/kms.pdf")
 		(tags "Switch SPST KMS2")
 		(property "Reference" "BTN_RD1"
@@ -5907,7 +5908,7 @@
 	(footprint "PCM_Diode_SMD_AKL:D_SOD-123"
 		(layer "F.Cu")
 		(uuid "56ae26dd-4c97-47ee-b046-f9f41f18c09d")
-		(at 238.8372 82.25)
+		(at 238.8372 81.5086)
 		(descr "SOD-123, Alternate KiCad Library")
 		(tags "SOD-123")
 		(property "Reference" "D1"
@@ -9271,7 +9272,7 @@
 	(footprint "Custom:SMD_Push_Side_button_3x6x3.5mm"
 		(layer "F.Cu")
 		(uuid "8bf94474-da58-45cd-b640-322683d4f700")
-		(at 213 104.9)
+		(at 213 102.9)
 		(descr "Microminiature SMT Side Actuated, 4.2 x 2.8 x 1.42mm with pegs, https://www.ckswitches.com/media/1482/kms.pdf")
 		(tags "Switch SPST KMS2")
 		(property "Reference" "BTN_RU1"
@@ -10302,7 +10303,7 @@
 	(footprint "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "95ac65e0-b880-48ae-a94a-24e922a8b66d")
-		(at 214.2866 53.4924)
+		(at 214.2866 55.5)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), Alternate KiCad Library")
 		(tags "resistor")
 		(property "Reference" "R9"
@@ -14072,44 +14073,44 @@
 		(sheetfile "SmartPendant.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start -8.382 7.493)
-			(end -8.382 4.7625)
+			(start -7.5 7.493)
+			(end -7.5 4.7625)
 			(stroke
 				(width 0.15)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "e8935cc9-f86b-4fe0-90ad-c3a7ea239ae2")
+			(uuid "48acb4d7-f2f2-4728-83d6-7b733545ea16")
 		)
 		(fp_line
 			(start -1.5875 7.493)
-			(end -8.382 7.493)
+			(end -7.5 7.493)
 			(stroke
 				(width 0.15)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "559449ef-e749-4453-ba59-b6f7c82c37f9")
+			(uuid "07ddaa76-d904-4a98-9579-048e9e47a20c")
 		)
 		(fp_line
 			(start 1.7145 7.493)
-			(end 8.4455 7.493)
+			(end 7.5 7.493)
 			(stroke
 				(width 0.15)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "86fdafe3-c5ca-4a4c-9233-3bd34ed918f7")
+			(uuid "0e965744-e545-4de8-b813-bb4f16262b60")
 		)
 		(fp_line
-			(start 8.4455 7.493)
-			(end 8.4455 4.8895)
+			(start 7.5 7.493)
+			(end 7.5 4.8895)
 			(stroke
 				(width 0.15)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "b7ce8715-fb7a-4914-a051-5ca8101e62b8")
+			(uuid "e4268081-62e3-464d-9158-4bfdf1079d34")
 		)
 		(fp_arc
 			(start -2 7.2)
@@ -14120,7 +14121,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "a3f3b2b6-6b51-41d7-8b07-00d2e8797b19")
+			(uuid "a2449b3a-b64d-4182-b634-38f2dfbbb52d")
 		)
 		(fp_arc
 			(start 2 -7.2)
@@ -14131,11 +14132,27 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "621053f4-9b93-4a78-8a3c-8cc882137922")
+			(uuid "478ad085-8573-433f-8572-4d1d7880a87c")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 -3.75 270)
+			(size 0.7 0.7)
+			(drill 0.7)
+			(layers "*.Cu" "*.Mask")
+			(thermal_bridge_angle 90)
+			(uuid "c0ef27b1-1847-4dfd-a2ac-f6243a615f87")
+		)
+		(pad "" np_thru_hole circle
+			(at 0 3.75 270)
+			(size 0.9 0.9)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(thermal_bridge_angle 90)
+			(uuid "e9139286-540a-451f-809c-92813793d700")
 		)
 		(pad "1" smd rect
-			(at 0.0635 7.4295 270)
-			(size 3 5)
+			(at 0.0635 7.92 270)
+			(size 2 4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 55 "BAT")
 			(pinfunction "+")
@@ -14143,8 +14160,8 @@
 			(uuid "3e2cef9b-66e9-47ba-afbc-5352afa98815")
 		)
 		(pad "2" smd rect
-			(at 0.0635 -7.62 270)
-			(size 3 5)
+			(at 0.0635 -7.92 270)
+			(size 2 4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 1 "GND")
 			(pinfunction "-")
@@ -15522,7 +15539,7 @@
 	(footprint "Custom:SMD_Push_Side_button_3x6x3.5mm"
 		(layer "F.Cu")
 		(uuid "eab3053a-0dbb-4296-8db9-bb61fd31e210")
-		(at 213 50.1 180)
+		(at 213 52.1 180)
 		(descr "Microminiature SMT Side Actuated, 4.2 x 2.8 x 1.42mm with pegs, https://www.ckswitches.com/media/1482/kms.pdf")
 		(tags "Switch SPST KMS2")
 		(property "Reference" "BTN_LU1"
@@ -15877,7 +15894,7 @@
 	(footprint "PCM_Resistor_SMD_AKL:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "f468bb18-08e4-449a-b8d4-ee0fb2eee37b")
-		(at 239.7506 79.75 180)
+		(at 239.7506 78.9686 180)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), Alternate KiCad Library")
 		(tags "resistor")
 		(property "Reference" "R3"
@@ -17145,19 +17162,31 @@
 			)
 		)
 	)
-	(gr_line
-		(start 225.8568 111.5568)
-		(end 225.9076 46.2026)
+	(gr_arc
+		(start 191 50)
+		(mid 189.585786 49.414214)
+		(end 189 48)
 		(stroke
-			(width 0.1)
-			(type default)
+			(width 0.05)
+			(type solid)
 		)
-		(layer "Dwgs.User")
-		(uuid "12fdd066-5b0a-4f23-8a78-d45d30368e54")
+		(layer "Edge.Cuts")
+		(uuid "06e58e04-4088-481b-a39c-08593eb7bdcf")
+	)
+	(gr_arc
+		(start 127 107)
+		(mid 125.585786 106.414214)
+		(end 125 105)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "1f2bef7a-5acc-4fdf-b694-3af73c0f1b65")
 	)
 	(gr_line
 		(start 125 99)
-		(end 125 107)
+		(end 125 105)
 		(stroke
 			(width 0.049999)
 			(type solid)
@@ -17167,7 +17196,7 @@
 	)
 	(gr_line
 		(start 248 85)
-		(end 248 107)
+		(end 248 105)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -17175,9 +17204,30 @@
 		(layer "Edge.Cuts")
 		(uuid "40bd10ba-44cc-4ac7-b8d2-dc01384063f5")
 	)
+	(gr_arc
+		(start 220 105)
+		(mid 221.414214 105.585786)
+		(end 222 107)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "53fd080c-75c9-4ea0-963d-c4638632f104")
+	)
 	(gr_line
-		(start 125 48)
-		(end 250 48)
+		(start 191 50)
+		(end 220 50)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "5be30c04-b32c-4cd6-aeb0-44c8587bc770")
+	)
+	(gr_line
+		(start 127 48)
+		(end 189 48)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -17186,7 +17236,7 @@
 		(uuid "641fb016-fcda-4ef8-bfb9-91cacba73557")
 	)
 	(gr_line
-		(start 250 48)
+		(start 250 50)
 		(end 250 83)
 		(stroke
 			(width 0.049999)
@@ -17194,6 +17244,27 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "6d13704e-b076-4be5-b71f-021574fd2864")
+	)
+	(gr_arc
+		(start 189 107)
+		(mid 189.585786 105.585786)
+		(end 191 105)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "726ac312-7735-4d1d-9871-11104c01973b")
+	)
+	(gr_line
+		(start 222 48)
+		(end 248 48)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "739bbfe1-af0a-446c-b052-d6e8fa9aa3ec")
 	)
 	(gr_curve
 		(pts
@@ -17206,9 +17277,20 @@
 		(layer "Edge.Cuts")
 		(uuid "7a6c7b72-fb5d-402d-a221-7ece9dbbbedd")
 	)
+	(gr_arc
+		(start 248 105)
+		(mid 247.414214 106.414214)
+		(end 246 107)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "7d4b0fd6-9d86-4d61-ac2d-9aec67ac117e")
+	)
 	(gr_line
-		(start 125 48)
-		(end 125 55.998154)
+		(start 125 50)
+		(end 125 56)
 		(stroke
 			(width 0.049999)
 			(type solid)
@@ -17218,7 +17300,7 @@
 	)
 	(gr_curve
 		(pts
-			(xy 125 55.998154) (xy 125 55.998154) (xy 142.37674 59.840307) (xy 141.999998 77.50008)
+			(xy 125 56) (xy 125 55.998154) (xy 142.37674 59.840307) (xy 141.999998 77.50008)
 		)
 		(stroke
 			(width 0.049999)
@@ -17228,14 +17310,35 @@
 		(uuid "9a6f2005-2f68-46bf-9634-75f4e6692c15")
 	)
 	(gr_line
-		(start 125 107)
-		(end 248 107)
+		(start 127 107)
+		(end 189 107)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
 		(layer "Edge.Cuts")
 		(uuid "a6cc5951-7881-4b7b-90d2-e9f2a99df33f")
+	)
+	(gr_arc
+		(start 125 50)
+		(mid 125.585786 48.585786)
+		(end 127 48)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "aab13b4f-406b-463b-91d5-f308ee4dfe36")
+	)
+	(gr_line
+		(start 222 107)
+		(end 246 107)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "ab9d5255-7e9b-40b0-b4f4-843196e28086")
 	)
 	(gr_arc
 		(start 250 83)
@@ -17247,6 +17350,38 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "b1e975d1-15c7-433f-91ee-3989946a0259")
+	)
+	(gr_arc
+		(start 248 48)
+		(mid 249.414214 48.585786)
+		(end 250 50)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c348321d-1f79-48db-b7c7-c26f952640c0")
+	)
+	(gr_arc
+		(start 222 48)
+		(mid 221.414214 49.414214)
+		(end 220 50)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d18978d3-94ec-4dde-853c-df8fb4989305")
+	)
+	(gr_line
+		(start 191 105)
+		(end 220 105)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f30a3e21-e3dd-476a-bd68-4cf79594ec06")
 	)
 	(zone
 		(net 0)
