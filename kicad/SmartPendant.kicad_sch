@@ -11640,6 +11640,7 @@
 	(symbol
 		(lib_id "Switch:SW_Push_Shielded")
 		(at 209.55 172.72 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11647,7 +11648,7 @@
 		(dnp no)
 		(uuid "3704f0ea-197b-4fe3-9137-d8b856f52889")
 		(property "Reference" "BTN_USR1"
-			(at 214.7316 164.0459 0)
+			(at 204.3684 164.0459 0)
 			(effects
 				(font
 					(size 1.6891 1.6891)
@@ -11656,7 +11657,7 @@
 			)
 		)
 		(property "Value" "SPST"
-			(at 220.091 166.7891 0)
+			(at 199.009 166.7891 0)
 			(effects
 				(font
 					(size 1.6891 1.6891)
