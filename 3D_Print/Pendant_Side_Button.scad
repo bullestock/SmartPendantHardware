@@ -1,4 +1,4 @@
-$fn = 300;
+$fn = 600;
 
 SideButton(9.7, 5.6, 6.5); // 1
 //SideButton(9, 5.4, 6.5); // 2
@@ -10,18 +10,20 @@ SideButton(9.7, 5.6, 6.5); // 1
 // *******************************************************************
 module SideButton(L, DB, DL)
 {
+  // Total height
   BH = 6;
+  skirt_height = 1.7;
   // Button
   hull()
   {
     translate([-(L-DB)/2, 0, 0]) cylinder(d=DB, h=BH);
     translate([+(L-DB)/2, 0, 0]) cylinder(d=DB, h=BH);
   }
-  // Button base
+  // Skirt
   hull()
   {
-    translate([-(L-DB)/2, 0, 0]) cylinder(d=DL, h=1.2);
-    translate([+(L-DB)/2, 0, 0]) cylinder(d=DL, h=1.2);
+    translate([-(L-DB)/2, 0, 0]) cylinder(d=DL, h=skirt_height);
+    translate([+(L-DB)/2, 0, 0]) cylinder(d=DL, h=skirt_height);
   }
 }
 
