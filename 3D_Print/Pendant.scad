@@ -21,7 +21,7 @@ ENC_T = 0.4;
 ENC_RT = 6;
 
 ENC_OFFSET = -5;
-STANDOFF_C = 6+5.6-1.1; // TODO: fix
+STANDOFF_C = 6+5.6-1.4; // For 8 mm hex standoff
 BUTTON_OFFSET = -3;
 
 BW = 60; // Board Width
