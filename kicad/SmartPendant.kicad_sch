@@ -6373,7 +6373,7 @@
 		(uuid "0a7a1c22-9565-4eba-98dc-6c1c3a0ace5d")
 	)
 	(junction
-		(at 304.8 38.1)
+		(at 304.8 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0fce6a97-1b8d-4ea9-ac73-bc30eae0333c")
@@ -6457,12 +6457,6 @@
 		(uuid "58863c7b-8349-4069-94b2-459db2052587")
 	)
 	(junction
-		(at 339.09 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5e60d199-0348-4884-a842-cbb277f5486e")
-	)
-	(junction
 		(at 214.63 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6479,6 +6473,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6946abe1-1f62-4ffa-9c55-5bf65fbee620")
+	)
+	(junction
+		(at 339.09 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6abf67db-4446-451f-9547-ce00c9163b9b")
 	)
 	(junction
 		(at 260.35 115.57)
@@ -6511,7 +6511,7 @@
 		(uuid "7eb2b53d-9f82-4e83-b6b8-bd9232f29a66")
 	)
 	(junction
-		(at 304.8 35.56)
+		(at 304.8 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8dc99eec-b0b9-4bb7-afa4-6c2965b113f0")
@@ -6625,7 +6625,7 @@
 		(uuid "e42b0ee3-0dd4-4b07-b6d3-42d44b218d6d")
 	)
 	(junction
-		(at 304.8 33.02)
+		(at 304.8 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e951f776-fcb1-48a1-ac66-1cba3a36a7ec")
@@ -6790,16 +6790,6 @@
 	)
 	(wire
 		(pts
-			(xy 320.04 40.64) (xy 321.31 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a1bf325-bf2a-43f6-b441-7402c2154f2e")
-	)
-	(wire
-		(pts
 			(xy 30.48 62.23) (xy 35.56 62.23)
 		)
 		(stroke
@@ -6830,7 +6820,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 33.02) (xy 304.8 35.56)
+			(xy 304.8 30.48) (xy 304.8 33.02)
 		)
 		(stroke
 			(width 0)
@@ -6940,6 +6930,16 @@
 	)
 	(wire
 		(pts
+			(xy 321.31 38.1) (xy 321.31 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14f4fdd8-7d81-47da-b15e-3414f4234721")
+	)
+	(wire
+		(pts
 			(xy 97.79 58.42) (xy 101.6 58.42)
 		)
 		(stroke
@@ -7007,6 +7007,16 @@
 			(type default)
 		)
 		(uuid "1d3ff49f-5ea7-42fa-b9b3-b91a59dc3687")
+	)
+	(wire
+		(pts
+			(xy 339.09 55.88) (xy 345.44 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1db8c968-efec-437b-9d6e-a5be38c2f0bf")
 	)
 	(wire
 		(pts
@@ -7190,7 +7200,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 29.21) (xy 304.8 33.02)
+			(xy 304.8 26.67) (xy 304.8 30.48)
 		)
 		(stroke
 			(width 0)
@@ -7200,7 +7210,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 38.1) (xy 304.8 40.64)
+			(xy 304.8 35.56) (xy 304.8 38.1)
 		)
 		(stroke
 			(width 0)
@@ -7290,7 +7300,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 38.1) (xy 309.88 38.1)
+			(xy 304.8 35.56) (xy 309.88 35.56)
 		)
 		(stroke
 			(width 0)
@@ -7660,7 +7670,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 35.56) (xy 309.88 35.56)
+			(xy 304.8 33.02) (xy 309.88 33.02)
 		)
 		(stroke
 			(width 0)
@@ -7707,16 +7717,6 @@
 			(type default)
 		)
 		(uuid "5e16a40a-c740-4d36-bc24-eef5ac3b98ce")
-	)
-	(wire
-		(pts
-			(xy 322.58 38.1) (xy 322.58 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e8762f5-cca8-4077-9427-7a4cd07225a0")
 	)
 	(wire
 		(pts
@@ -7830,7 +7830,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 35.56) (xy 304.8 38.1)
+			(xy 304.8 33.02) (xy 304.8 35.56)
 		)
 		(stroke
 			(width 0)
@@ -7947,6 +7947,16 @@
 			(type default)
 		)
 		(uuid "70bf5996-8b66-4e6e-ae97-365d2e0acb76")
+	)
+	(wire
+		(pts
+			(xy 320.04 30.48) (xy 339.09 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70f3a845-f90f-4529-b06d-86ff27105303")
 	)
 	(wire
 		(pts
@@ -8087,16 +8097,6 @@
 			(type default)
 		)
 		(uuid "7d8567c4-71cf-4c36-8528-bf8beb334945")
-	)
-	(wire
-		(pts
-			(xy 321.31 60.96) (xy 339.09 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8011c9e4-38c5-4a7b-9455-fc077d7f1000")
 	)
 	(wire
 		(pts
@@ -8350,16 +8350,6 @@
 	)
 	(wire
 		(pts
-			(xy 320.04 38.1) (xy 322.58 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93fe3b10-6f26-4dd2-829b-2e188d2d9a95")
-	)
-	(wire
-		(pts
 			(xy 190.5 59.69) (xy 191.77 59.69)
 		)
 		(stroke
@@ -8520,7 +8510,7 @@
 	)
 	(wire
 		(pts
-			(xy 304.8 33.02) (xy 309.88 33.02)
+			(xy 304.8 30.48) (xy 309.88 30.48)
 		)
 		(stroke
 			(width 0)
@@ -8680,27 +8670,7 @@
 	)
 	(wire
 		(pts
-			(xy 322.58 50.8) (xy 345.44 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad6b4b22-b1c0-4dbf-bf21-73703a705d05")
-	)
-	(wire
-		(pts
-			(xy 339.09 60.96) (xy 339.09 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ade32289-44c5-4a78-8390-cd438f934baf")
-	)
-	(wire
-		(pts
-			(xy 304.8 40.64) (xy 309.88 40.64)
+			(xy 304.8 38.1) (xy 309.88 38.1)
 		)
 		(stroke
 			(width 0)
@@ -8760,16 +8730,6 @@
 	)
 	(wire
 		(pts
-			(xy 339.09 55.88) (xy 345.44 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b14b8c57-95ef-4f7c-8a82-ef26021e8111")
-	)
-	(wire
-		(pts
 			(xy 104.14 38.1) (xy 109.22 38.1)
 		)
 		(stroke
@@ -8787,6 +8747,16 @@
 			(type default)
 		)
 		(uuid "b250bdcf-d8ab-474c-a687-951e634e77be")
+	)
+	(wire
+		(pts
+			(xy 339.09 30.48) (xy 339.09 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3274ac9-1ce9-471d-84d7-5f9a12ce08d8")
 	)
 	(wire
 		(pts
@@ -9010,6 +8980,16 @@
 	)
 	(wire
 		(pts
+			(xy 320.04 38.1) (xy 321.31 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0ec8905-5d3d-44d8-abeb-cd65f20b2692")
+	)
+	(wire
+		(pts
 			(xy 337.82 43.18) (xy 345.44 43.18)
 		)
 		(stroke
@@ -9067,6 +9047,16 @@
 			(type default)
 		)
 		(uuid "c5487ed2-a2e5-4871-a230-27f020c7837b")
+	)
+	(wire
+		(pts
+			(xy 321.31 50.8) (xy 345.44 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6f34922-609c-4be5-b965-5ed14d394581")
 	)
 	(wire
 		(pts
@@ -9507,16 +9497,6 @@
 			(type default)
 		)
 		(uuid "f83eeebe-ae03-4b3e-846a-a63815a4767a")
-	)
-	(wire
-		(pts
-			(xy 321.31 40.64) (xy 321.31 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8a32bb3-b67e-4030-8f73-a3d786e9b9ea")
 	)
 	(wire
 		(pts
@@ -14120,7 +14100,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 304.8 29.21 0)
+		(at 304.8 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14129,7 +14109,7 @@
 		(fields_autoplaced yes)
 		(uuid "65922d0f-0598-4c32-b408-d391f59eeae1")
 		(property "Reference" "#PWR033"
-			(at 304.8 33.02 0)
+			(at 304.8 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14138,7 +14118,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 304.8 24.13 0)
+			(at 304.8 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14146,7 +14126,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 304.8 29.21 0)
+			(at 304.8 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14155,7 +14135,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 304.8 29.21 0)
+			(at 304.8 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14164,7 +14144,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 304.8 29.21 0)
+			(at 304.8 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17620,7 +17600,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04")
-		(at 314.96 38.1 270)
+		(at 314.96 35.56 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17629,7 +17609,7 @@
 		(fields_autoplaced yes)
 		(uuid "de2f623c-cd84-4617-9a90-637d9ad5dc87")
 		(property "Reference" "RN1"
-			(at 314.96 26.67 90)
+			(at 314.96 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17637,7 +17617,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 314.96 29.21 90)
+			(at 314.96 26.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17645,7 +17625,7 @@
 			)
 		)
 		(property "Footprint" "PCM_Resistor_SMD_AKL:R_Array_Concave_4x0603"
-			(at 314.96 45.085 90)
+			(at 314.96 42.545 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17654,7 +17634,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 314.96 38.1 0)
+			(at 314.96 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17663,7 +17643,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology"
-			(at 314.96 38.1 0)
+			(at 314.96 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18391,7 +18371,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Custom:J_SD_Card-micro_socket_A"
+		(property "Footprint" "Custom:J_SD_Card-micro_dual"
 			(at 420.37 25.4 0)
 			(effects
 				(font
