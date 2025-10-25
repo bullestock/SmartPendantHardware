@@ -9578,7 +9578,7 @@
 			)
 		)
 	)
-	(global_label "BTN_LD"
+	(global_label "BTN_RD"
 		(shape input)
 		(at 250.19 191.77 0)
 		(effects
@@ -9638,7 +9638,7 @@
 			)
 		)
 	)
-	(global_label "BTN_LU"
+	(global_label "BTN_RU"
 		(shape input)
 		(at 238.76 166.37 180)
 		(effects
@@ -10140,7 +10140,7 @@
 			)
 		)
 	)
-	(global_label "BTN_RD"
+	(global_label "BTN_LD"
 		(shape input)
 		(at 284.48 191.77 180)
 		(effects
@@ -10380,7 +10380,7 @@
 			)
 		)
 	)
-	(global_label "BTN_RU"
+	(global_label "BTN_LU"
 		(shape input)
 		(at 294.64 166.37 0)
 		(effects
