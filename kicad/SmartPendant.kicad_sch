@@ -9958,7 +9958,7 @@
 			)
 		)
 	)
-	(global_label "LEFT_BTN"
+	(global_label "RIGHT_BTN"
 		(shape input)
 		(at 226.06 228.6 180)
 		(effects
@@ -10740,7 +10740,7 @@
 			)
 		)
 	)
-	(global_label "RIGHT_BTN"
+	(global_label "LEFT_BTN"
 		(shape input)
 		(at 281.94 228.6 180)
 		(effects
