@@ -1,5 +1,6 @@
-//$fn=600;
+$fn=600;
 //$fn=500;
+//$fn=10;
 
 //import("OBJ_PCB_Smart_Pendant.stl");
 
@@ -28,6 +29,8 @@ BW = 60; // Board Width
 BL = 126; // Board Length(from center of encoder to top edge)
 BT = 1.6 + 2; // Board thickness
 BZPOS = 4.4; // Board Z position if placed on table display face down
+BUTZ = 7; // Button Z offset
+SHZ = 8; // Screw hole Z offset
 
 SW = 55.5; // Screen width
 SH = 89.0; // Screen height
@@ -48,10 +51,10 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-//Top();
+Top();
 //Bottom();
 //translate([75,0,0]) Bottom();
-translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
+//translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 
 //Board();
 
@@ -189,20 +192,21 @@ module Top()
           // PCB side support
           translate([-BW/2-(R-T), W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T]);
           translate([BW/2-2, W/2+ED/2, T]) cube([2+(R-T), BL-W/2-ED, BZPOS-T]);
-          translate([-BW/2-(R-T), 2*W, T]) cube([2+(R-T), 5, H-T-11]);
-          translate([BW/2-2, 2*W, T]) cube([2+(R-T), 5, H-T-11]);
+          // PCB top support
+          translate([-BW/2-(R-T), 2*W, T]) cube([2+(R-T), 5, H-T-9]);
+          translate([BW/2-2, 2*W, T]) cube([2+(R-T), 5, H-T-9]);
           // Display support
-          translate([-BW/2, BL-5, T]) cube([BW, 2+(R-T), 2]);
+          translate([-BW/2, BL-2, T]) cube([BW, 2+(R-T), 2]);
         }
         // Screw holes
         // - top button
-        translate([BW/2-13-6, BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90, 0, 0]) ScrewHoleUp(15);
+        translate([BW/2-13-6, BL+R-0.4, BZPOS+BT+SHZ]) rotate([90, 0, 0]) ScrewHoleUp(15);
         // - USB
-        translate([-BW/2+13+6/2, BL+R-0.4, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([90, 0, 0]) ScrewHoleUp(15);
+        translate([-BW/2+13+6/2, BL+R-0.4, BZPOS+BT+SHZ]) rotate([90, 0, 0]) ScrewHoleUp(15);
         // - left
-        translate([-W/2-R+0.4, 55.8, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0, 90, 0]) ScrewHoleUp(15);
+        translate([-W/2-R+0.4, 55.8, BZPOS+BT+SHZ]) rotate([0, 90, 0]) ScrewHoleUp(15);
         // - right
-        translate([W/2+R-0.4, 55.8, BZPOS+BT+(H-BZPOS-BT)/2]) rotate([0, -90, 0]) ScrewHoleUp(15);
+        translate([W/2+R-0.4, 55.8, BZPOS+BT+SHZ]) rotate([0, -90, 0]) ScrewHoleUp(15);
         // Encoder hole
         translate([0, ENC_OFFSET, -1]) cylinder(d=W+ENC_T, h=H);
         // Display
@@ -211,23 +215,23 @@ module Top()
         // Down side buttons
         hull()
         {
-          translate([-50, 73.2-2, BZPOS+BT+6]) rotate([0, 90, 0]) cylinder(d=6, h=100);
-          translate([-50, 73.2+2, BZPOS+BT+6]) rotate([0, 90, 0]) cylinder(d=6, h=100);
+          translate([-50, 73.2-2, BZPOS+BT+BUTZ]) rotate([0, 90, 0]) cylinder(d=6, h=100);
+          translate([-50, 73.2+2, BZPOS+BT+BUTZ]) rotate([0, 90, 0]) cylinder(d=6, h=100);
         }
         // Up side buttons
         hull()
         {
-          translate([-50, 88.3-2, BZPOS+BT+6]) rotate([0, 90, 0]) cylinder(d=6, h=100);
-          translate([-50, 88.3+2, BZPOS+BT+6]) rotate([0, 90, 0]) cylinder(d=6, h=100);
+          translate([-50, 88.3-2, BZPOS+BT+BUTZ]) rotate([0, 90, 0]) cylinder(d=6, h=100);
+          translate([-50, 88.3+2, BZPOS+BT+BUTZ]) rotate([0, 90, 0]) cylinder(d=6, h=100);
         }
         // Top button
         hull()
         {
-          translate([20.5-2, 120, BZPOS+BT+6]) rotate([-90,0,0]) cylinder(d=6, h=300);
-          translate([20.5+2, 120, BZPOS+BT+6]) rotate([-90,0,0]) cylinder(d=6, h=30);
+          translate([21.5-2, 120, BZPOS+BT+BUTZ]) rotate([-90,0,0]) cylinder(d=6, h=30);
+          translate([21.5+2, 120, BZPOS+BT+BUTZ]) rotate([-90,0,0]) cylinder(d=6, h=30);
         }
         // SD Card cutout
-        translate([-W, CP, BZPOS+BT+1.8]) cube([W, 12, 1.8]);
+        translate([-W, CP, BZPOS+BT+1.8+2.5]) cube([W, 12, 1.8]);
         if(DEBUG_PORT)
         {
           // Debug port cutout(full port)
@@ -237,7 +241,7 @@ module Top()
           //translate([W/2-9,106.3-4.8/2, BZPOS+BT+1.2+6.4]) cube([15,4.8,0.6]);
         }
         // USB-C 
-        translate([0, BL, BZPOS+BT+6-2.7/2-0.4])
+        translate([0, BL, BZPOS+BT+6-2.7/2-0.4+2])
         {
           // Connector hole
           translate([0,-1,0]) rotate([-90,0,0]) hull()
@@ -261,7 +265,7 @@ module Top()
       difference()
       {
         // PCB support
-        translate([-(W+R*2-T*2)/2, 0, T]) cube([W+R*2-T*2, W/2, H-T-11]);
+        translate([-(W+R*2-T*2)/2, 0, T]) cube([W+R*2-T*2, W/2, H-T-9]);
         // Cutout for encoder rim
         translate([0, ENC_OFFSET, 0]) cylinder(d=W+ENC_T, h=BZPOS);
         // Cutout for encoder terminals
@@ -316,8 +320,8 @@ module Bottom()
     translate([0, 90.5, -1]) 
     {
       // RESET/BOOT
-      translate([+2.325, -15,0]) cylinder(d=3, h=10);
-      translate([-2.325, -15,0]) cylinder(d=3, h=10);
+      //translate([+2.325, -15,0]) cylinder(d=3, h=10);
+      //translate([-2.325, -15,0]) cylinder(d=3, h=10);
       //translate([+2.325,-40.7,0]) cylinder(d=3, h=10);
       // LEDs
       //translate([+5,-41.7,0]) cylinder(d=1.5, h=10);
@@ -378,7 +382,8 @@ module Bottom()
   {
     union()
     {
-      translate([-BW/2,55.8-6/2,0]) cube([3.5,6,BOTTOM_H + 11 - 1.25]);
+      // thinner due to buzzer - revert to 3.5
+      translate([-BW/2, 55.8-6/2, 0]) cube([2.5, 6,BOTTOM_H + 11 - 1.25]);
       difference()
       {
         translate([BW/2-3.5, 55.8-6/2, 0]) cube([3.5, 6, BOTTOM_H + 11 - 1.25]);
