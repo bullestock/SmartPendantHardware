@@ -2,16 +2,13 @@
 
 This project allows controlling a grblHAL based CNC machine without a PC. It also makes work way more convenient.
 
-**Store:** https://devtronic.square.site/
+This fork builds upon the original Devtronic/Nicolai Shlapunov project, which has a store here: https://devtronic.square.site/
 
-![Image](Media/Devtronic_SmartPendant_1.png "Devtronic SmartPendant")
-![Image](Media/Devtronic_SmartPendant_2.png "Devtronic SmartPendant")
+![Image](Media/Devtronic_SmartPendant.png "Devtronic SmartPendant")
 
 # Firmware
 
-Source code for this project can be found there: **https://github.com/nickshl/SmartPendant**
-
-Latest firmware placed in Release folder: [SmartPendant.hex](https://github.com/nickshl/SmartPendant/blob/main/Release/SmartPendant.hex)
+Source code for this project can be found there: **https://github.com/bullestock/SmartPendantFirmware**
 
 To load new firmware [STM32CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html) is used.
 Connect SmartPendant to PC using USB-C cable. Press and hold BOOT0 button, then short press NRST button, couple seconds later BOOT0 button can be released.
