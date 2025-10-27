@@ -55,7 +55,10 @@ To make this project yourself, you will need these essential parts:
 * See the KiCAD files for additional components.
 
 ![Image](Media/display.jpg "Preparing the display")
-Note the placement of the two display support pieces (glued to the pcb).
+Note the placement of the two display support pieces (glued to the PCB).
+
+![Image](Media/inside.jpg "PCB mounted in case")
+Note 8 mm threaded standoff on bottom encoder screw. Two printed spacers are mounted beneath the PCB.
 
 ## Case
 
