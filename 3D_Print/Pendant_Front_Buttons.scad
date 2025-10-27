@@ -33,7 +33,7 @@ module FrontButton(DB, DL, LR)
   Y2 = sqrt(abs(X2*X2 - R*R));
 
   skirt_h = 4.5 - 2.4;
-  BH = skirt_h + 4.6;
+  BH = skirt_h + 7.9;
   difference()
   {
     hull()
