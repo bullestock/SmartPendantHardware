@@ -1,6 +1,6 @@
 $fn=600;
 //$fn=500;
-//$fn=10;
+//$fn=25;
 
 //import("OBJ_PCB_Smart_Pendant.stl");
 
@@ -195,6 +195,8 @@ module Top()
           // PCB top support
           translate([-BW/2-(R-T), 2*W, T]) cube([2+(R-T), 5, H-T-9]);
           translate([BW/2-2, 2*W, T]) cube([2+(R-T), 5, H-T-9]);
+          translate([-BW/2-(R-T), 2*W - 4, T]) cube([2+(R-T)-1.6, 4, H-T-5]);
+          translate([BW/2 - 0.4, 2*W - 4, T]) cube([2, 4, H-T-5]);
           // Display support
           translate([-BW/2, BL-2, T]) cube([BW, 2+(R-T), 2]);
         }
