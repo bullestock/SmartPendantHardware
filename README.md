@@ -45,6 +45,7 @@ To make this project yourself, you will need these essential parts:
 * [WeAct BlackPill F411 25M HSE:](https://s.click.aliexpress.com/e/_DC6TlGd)
 * [3.5" Display with touchscreen based on ILI9488 LCD controller and FT6236 touch controller](https://www.aliexpress.com/item/1005009339669149.html)
 * [60 mm 6 pin 100 PPR handwheel](https://s.click.aliexpress.com/e/_DCFuJHr)
+* [SMD connector for display](https://www.aliexpress.com/item/1005005194925318.html) (note that the connector must be aligned with the through holes, and that you need to remove the plastic part of the header on the display; see picture below).
 * [Side button switches](https://www.aliexpress.com/item/1005003036287080.html)
 * [Front button switches](https://www.aliexpress.com/item/1005007564864690.html)
 * [USB C connector](https://www.aliexpress.com/item/1005008913274510.html)
@@ -52,6 +53,9 @@ To make this project yourself, you will need these essential parts:
 * [Buzzer](https://www.aliexpress.com/item/32949954569.html)
 * The SD card footprint allows for two common sockets to be mounted.
 * See the KiCAD files for additional components.
+
+![Image](Media/display.jpg "Preparing the display")
+Note the placement of the two display support pieces (glued to the pcb).
 
 ## Case
 
