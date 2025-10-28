@@ -51,10 +51,10 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-Top();
+//Top();
 //Bottom();
 //translate([75,0,0]) Bottom();
-//translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
+translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 
 //Board();
 
@@ -297,6 +297,8 @@ module Top()
 
 module Bottom()
 {
+  lock_h = BOTTOM_H + 7;
+  hole_z = BOTTOM_H+(H-BZPOS-BT)/2 - 1.85;
   difference()
   {
     union()
@@ -371,13 +373,13 @@ module Bottom()
   // Top locks
   difference()
   {
-    translate([BW/2-6-13,BL-3.5,0]) cube([6, 3.5+(R-T), BOTTOM_H + 11 - 1.25]);
-    translate([BW/2-6-13+6/2, 0, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
+    translate([BW/2-6-13, BL-3.5, 0]) cube([6, 3.5+(R-T), lock_h]);
+    translate([BW/2-6-13+6/2, 0, hole_z]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
   }
   difference()
   {
-    translate([-BW/2+16, BL-3.5, 0]) cube([6, 3.5+(R-T), BOTTOM_H + 11 - 1.25]);
-    translate([-BW/2+16+6/2, 0, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
+    translate([-BW/2+16, BL-3.5, 0]) cube([6, 3.5+(R-T), lock_h]);
+    translate([-BW/2+16+6/2, 0, hole_z]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
   }
   // Middle locks
   difference()
@@ -385,15 +387,15 @@ module Bottom()
     union()
     {
       // thinner due to buzzer - revert to 3.5
-      translate([-BW/2, 55.8-6/2, 0]) cube([2.5, 6,BOTTOM_H + 11 - 1.25]);
+      translate([-BW/2, 55.8-6/2, 0]) cube([2.5, 6, lock_h]);
       difference()
       {
-        translate([BW/2-3.5, 55.8-6/2, 0]) cube([3.5, 6, BOTTOM_H + 11 - 1.25]);
+        translate([BW/2-3.5, 55.8-6/2, 0]) cube([3.5, 6, lock_h]);
         //translate([BW/2-3.5-2, 55.8-7/2, BOTTOM_H+H-BZPOS-BT-2]) cube([3.5, 7, BOTTOM_H+H-BZPOS-BT]);
       }
     }
     // Screw hole
-    translate([-100, 55.8, BOTTOM_H+(H-BZPOS-BT)/2]) rotate([0, 90, 0]) cylinder(d=2.6, h=200);
+    translate([-100, 55.8, hole_z]) rotate([0, 90, 0]) cylinder(d=2.6, h=200);
   }
 }
 
