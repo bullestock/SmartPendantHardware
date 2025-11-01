@@ -373,12 +373,12 @@ module Bottom()
   // Top locks
   difference()
   {
-    translate([BW/2-6-13, BL-3.5, 0]) cube([6, 3.5+(R-T), lock_h]);
+    translate([BW/2-22, BL-5, 0]) cube([12, 5+(R-T), lock_h - 0.2]);
     translate([BW/2-6-13+6/2, 0, hole_z]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
   }
   difference()
   {
-    translate([-BW/2+16, BL-3.5, 0]) cube([6, 3.5+(R-T), lock_h]);
+    translate([-BW/2+15, BL-5, 0]) cube([9, 5+(R-T), lock_h - 0.2]);
     translate([-BW/2+16+6/2, 0, hole_z]) rotate([-90, 0, 0]) cylinder(d=2.6, h=200);
   }
   // Middle locks
@@ -387,10 +387,10 @@ module Bottom()
     union()
     {
       // thinner due to buzzer - revert to 3.5
-      translate([-BW/2, 55.8-6/2, 0]) cube([2.5, 6, lock_h]);
+      translate([-BW/2, 51.5 - 6/2, 0]) cube([2.5, 16, lock_h]);
       difference()
       {
-        translate([BW/2-3.5, 55.8-6/2, 0]) cube([3.5, 6, lock_h]);
+        translate([BW/2-3.5, 51.5 - 6/2, 0]) cube([3.5, 16, lock_h]);
         //translate([BW/2-3.5-2, 55.8-7/2, BOTTOM_H+H-BZPOS-BT-2]) cube([3.5, 7, BOTTOM_H+H-BZPOS-BT]);
       }
     }
