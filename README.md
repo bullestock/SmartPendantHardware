@@ -62,7 +62,7 @@ Note 8 mm threaded standoff on bottom encoder screw. Two printed spacers are mou
 
 ## Case
 
-![Image](Media/Devtronic_SmartPendant_Case.png "Devtronic SmartPendant Case")
+![Image](Media/assembled.png "Assembled SmartPendant")
 
 3D_Print folder of this repo contain 3D files (OpenSCAD and STLs) of the case.
 
