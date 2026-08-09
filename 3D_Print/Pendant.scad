@@ -51,10 +51,10 @@ BOTTOM_H = 4; // Height of bottom piece
 LOCK_H = 1.6; // Lock height
 
 
-//Top();
+Top();
 //Bottom();
 //translate([75,0,0]) Bottom();
-translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
+//translate([0, 0, H+BOTTOM_H]) rotate([0, 180, 0]) Bottom();
 
 //Board();
 
@@ -169,10 +169,11 @@ module Top()
       difference()
       {
         // half torus to support encoder
-        translate([0, ENC_OFFSET, ENC_RT]) cylinder(d=W+ENC_T, h=3);
-        translate([0, ENC_OFFSET, 2]) cylinder(d=43+ENC_T, h=BZPOS+5);
-        translate([-80/2, ENC_OFFSET + 5, -1]) cube([80, 40, H+T*2+1]);
+        translate([0, ENC_OFFSET, 15]) cylinder(d=W+ENC_T+2, h=3);
+        //translate([0, ENC_OFFSET, 2]) cylinder(d=43+ENC_T, h=BZPOS+5);
+        //translate([-80/2, ENC_OFFSET + 5, -1]) cube([80, 40, H+T*2+1]);
       }
+      translate([-5, -35, 8]) cube([10, 10, 10]);
       // Case shell
       difference()
       {
@@ -210,7 +211,7 @@ module Top()
         // - right
         translate([W/2+R-0.4, 55.8, BZPOS+BT+SHZ]) rotate([0, -90, 0]) ScrewHoleUp(15);
         // Encoder hole
-        translate([0, ENC_OFFSET, -1]) cylinder(d=W+ENC_T, h=H);
+        translate([0, ENC_OFFSET, -1]) cylinder(d=50.5, h=H);
         // Display
         translate([-SW/2, ED+W/2 - 4, -1]) cube([SW, SH, H]);
         //translate([-SW/2, BL-6, 1.4]) cube([SW, 6, H]);
@@ -283,7 +284,7 @@ module Top()
       }
     }
     // Encoder screw hole
-    translate([0, -50.5/2 + ENC_OFFSET, 0]) cylinder(d=3.5, h=H);
+    translate([0, -50.5/2 + ENC_OFFSET, 5]) cylinder(d=3.5, h=15);
     // Right front button hole
     translate([0, -5, 0]) ButtonHole(2.8, 2.2);
     // Left button hole
